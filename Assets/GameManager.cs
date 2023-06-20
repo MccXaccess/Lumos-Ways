@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.R) && currentState == PlayerState.DEAD)
         {
             currentState = PlayerState.RESPAWN;
         }
