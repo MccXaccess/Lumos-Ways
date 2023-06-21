@@ -5,20 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death
+  - NextStage
+  - Attachable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Surface
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BackgroundLower
+  - BackgroundUpper
+  - MiddleLower
+  - MiddleCenter
+  - MiddleUpper
+  - ForegroundLower
+  - ForegroundUpper
   - 
   - 
   - 
@@ -39,22 +41,25 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: BackgroundLower
     uniqueID: 1361095003
     locked: 0
-  - name: Background
+  - name: BackgroundUpper
     uniqueID: 365096453
     locked: 0
   - name: MiddleLower
     uniqueID: 878768919
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: MiddleCenter
+    uniqueID: 65255581
     locked: 0
   - name: MiddleUpper
     uniqueID: 169730399
     locked: 0
-  - name: Foreground
+  - name: ForegroundLower
     uniqueID: 2239570827
     locked: 0
   - name: ForegroundUpper

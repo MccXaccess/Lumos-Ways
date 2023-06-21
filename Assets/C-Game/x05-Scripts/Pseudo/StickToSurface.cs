@@ -27,66 +27,55 @@ public class StickToSurface : MonoBehaviour
     }
 
     private IEnumerator Cooldown()
-{
-    float currentTime = 0.0f;
-
-    while (currentTime < lastTimeFixed)
     {
-        currentTime += Time.deltaTime;
-        yield return null;
+        float currentTime = 0.0f;
+
+        while (currentTime < lastTimeFixed)
+        {
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+
+        lastTimeTouched = currentTime;
+        ableToStick = true; // Set ableToStick to true after the cooldown
     }
 
-    lastTimeTouched = currentTime;
-    ableToStick = true; // Set ableToStick to true after the cooldown
-}
-
-private void Update()
-{
-    centerPoint = transform.position;
-
-    Collider2D[] colliders = Physics2D.OverlapCircleAll(centerPoint, radius, layerMask);
-
-    isNearSurface = colliders.Length > 0;
-
-    if (isNearSurface && ableToStick)
+    private void Update()
     {
-        TurnPhysicsOFF(rigidbody);
-        isNearSurface = true;
-    }
-    else
-    {
-        TurnPhysicsON(rigidbody);
-        isNearSurface = false;
-        StartCoroutine(Cooldown()); // Start the cooldown coroutin
-    }
-}
+        centerPoint = transform.position;
 
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(centerPoint, radius, layerMask);
 
-    // private void OnCollisionEnter2D(Collision2D other) 
-    // {
-    //     StopCoroutine(timer());
-    //     // we did hit the surface ( aka grounded )
-    //     if (other != null && lastTimeTouched >= lastTimeFixed)
-    //     {
-    //         TurnPhysicsOFF(rigidbody);
-    //         isNearSurface = true;
-    //     }
-    //     else
-    //     {
-    //         TurnPhysicsON(rigidbody);
-    //         isNearSurface = false;
-    //     }
-    // }
+        isNearSurface = colliders.Length > 0;
 
-    // private void OnCollisionStay2D(Collision2D other) 
-    // {
+        //BoxCollider2D col = colliders[].GetComponent<BoxCollider2D>();
         
-    // }
+        // if (col != null && col.usedByEffector)
+        // {
+        //     Debug.Log("something:");
+        // }
 
-    // private void OnCollisionExit2D(Collision2D other) 
-    // {
-    //     StartCoroutine(timer());
-    // }
+        if (isNearSurface && colliders[0].gameObject.CompareTag("Attachable"))
+        {
+            transform.parent.SetParent(colliders[0].gameObject.transform);
+        }
+        else
+        {
+            transform.parent.SetParent(null);
+        }
+
+        if (isNearSurface && ableToStick)
+        {
+            TurnPhysicsOFF(rigidbody);
+            isNearSurface = true;
+        }
+        else
+        {
+            TurnPhysicsON(rigidbody);
+            isNearSurface = false;
+            StartCoroutine(Cooldown()); // Start the cooldown coroutin
+        }
+    }
 
     public static void InitTakeoff()
     {
