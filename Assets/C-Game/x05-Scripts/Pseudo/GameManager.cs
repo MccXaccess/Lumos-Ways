@@ -22,9 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject isDeadUI;
     public ParticleSystem deathParticles;
 
-    private StickToSurface stickToSurface;
-
-    int sceneNum;
+    private StickToSurface stickToSurface;   
 
     public bool IsAlive { get => isAlive; }
     public enum PlayerState
@@ -49,7 +47,6 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
-        sceneNum = 0;
         isAlive = true;
         currentState = PlayerState.ALIVE;
         stickToSurface = player.GetComponent<StickToSurface>();
