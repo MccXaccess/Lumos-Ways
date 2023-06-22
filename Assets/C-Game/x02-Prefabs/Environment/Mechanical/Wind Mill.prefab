@@ -33,7 +33,7 @@ Transform:
   - {fileID: 2447577453402585039}
   - {fileID: 5782525481005342252}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &8182142217497509043
 PolygonCollider2D:
@@ -104,7 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248fbc15254a070149d70354a9599b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationSpeed: 112
+  rotationSpeedMax: 100
   directionLeft: 0
 --- !u!1 &5168531370603596232
 GameObject:

@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     // i think we can later make advanced respawn system like last time you died is gonna be shown...?
     [Tooltip("place for respawn on death")] public Transform safeSpot;
 
+    [Tooltip("put levels in order")] public List<GameObject> stages = new List<GameObject>();
+
+    private GameObject currentLevel;
+
     private bool isAlive;
     private bool isRespawning;
 
@@ -18,7 +22,9 @@ public class GameManager : MonoBehaviour
     public GameObject isDeadUI;
     public ParticleSystem deathParticles;
 
-    
+    private StickToSurface stickToSurface;
+
+    int sceneNum;
 
     public bool IsAlive { get => isAlive; }
     public enum PlayerState
@@ -27,20 +33,34 @@ public class GameManager : MonoBehaviour
         ALIVE,
         RESPAWN,
     }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
     
     private void Start()
     {
-        Instance = this;
+        sceneNum = 0;
         isAlive = true;
         currentState = PlayerState.ALIVE;
+        stickToSurface = player.GetComponent<StickToSurface>();
+        currentLevel = stages?[0];
+        InitiateStages();
     }
 
     public void Dead()
     {
         currentState = PlayerState.DEAD;
-        Debug.Log(currentState);
         isAlive = false;
-        Debug.Log("you're dead");
         Hide(player);
         Show(isDeadUI);
 
@@ -82,11 +102,63 @@ public class GameManager : MonoBehaviour
         value.SetActive(true);
     }
 
+    private void InitiateStages()
+    {
+        SetActive(stages, false);
+        currentLevel.SetActive(true);
+        stickToSurface.initWin = false;
+    }
+
+    private void NextStage(int index)
+    {
+        currentLevel = stages[index + 1];
+        SetActive(stages, false);
+        currentLevel.SetActive(true);
+        stickToSurface.initWin = false;
+    }
+
+    IEnumerator IENextStage()
+    {
+         
+        yield return new  WaitForSeconds(0.25F);
+    }
+
+    private void InitWin()
+    {
+        int currentIndex = stages.IndexOf(currentLevel);
+
+        if (currentIndex >= stages.Count - 1)
+        {
+            currentLevel = stages[0];
+            InitiateStages();
+            return;
+        }
+        NextStage(currentIndex);
+        return;
+    
+        // show ui 
+        // change level?
+        // after pressed button boolean == false;
+    }
+
+    private void SetActive(List <GameObject> objects, bool state = false)
+    {
+        foreach (GameObject obj in objects)
+        {
+            obj.SetActive(state);
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.R) && currentState == PlayerState.DEAD)
         {
             currentState = PlayerState.RESPAWN;
+        }
+
+        if (stickToSurface.initWin)
+        {
+            InitWin();
         }
 
         switch (currentState)

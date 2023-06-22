@@ -15,6 +15,8 @@ public class StickToSurface : MonoBehaviour
     float lastTimeTouched;
 
     int layerMaskValue;
+
+    public bool initWin;
     
 
     // temporary variables
@@ -64,6 +66,12 @@ public class StickToSurface : MonoBehaviour
         else
         {
             transform.parent.SetParent(null);
+        }
+
+        // i think those is near surfaces are not neccessary
+        if (isNearSurface && colliders[0].gameObject.CompareTag("NextStage") && !initWin)
+        {
+            initWin = true;
         }
 
         if (isNearSurface && ableToStick)
