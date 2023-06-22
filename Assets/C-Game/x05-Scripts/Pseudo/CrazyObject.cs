@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class CrazyObject : MonoBehaviour
 {
-    public float speed;
-    public float radius;
+    public float teleportRadius = 5f;
+    public float intervalTime = 0.5f;
 
-    private void Start()
+    private Vector3 initialPosition;
+
+    void Start()
     {
-        StartCoroutine(RandomPlace());
+        initialPosition = transform.position;
+        StartCoroutine(TeleportRandomly());
     }
 
-    IEnumerator RandomPlace()
+    IEnumerator TeleportRandomly()
     {
-        while(true)
+        while (true)
         {
-            Vector2 randomPlace = Random.insideUnitCircle * radius;
-            transform.Translate(randomPlace * speed);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(intervalTime);
+            Vector2 randomPosition = Random.insideUnitCircle.normalized * teleportRadius;
+            transform.position = initialPosition + new Vector3(randomPosition.x, randomPosition.y, 0);
         }
     }
 }

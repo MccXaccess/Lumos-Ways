@@ -14,7 +14,7 @@ public class StickToSurface : MonoBehaviour
     // data that will be modified troghout the timer logic
     float lastTimeTouched;
 
-    
+    int layerMaskValue;
     
 
     // temporary variables
@@ -24,6 +24,8 @@ public class StickToSurface : MonoBehaviour
     private void Start()
     {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
+
+        layerMaskValue = layerMask.value;
     }
 
     private IEnumerator Cooldown()

@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class ModulePlatform : MonoBehaviour
 {
-    private Rigidbody rigidbody;
 
     public List<Transform> targets = new List<Transform>();
 
     private Transform currentTarget;
 
-    public float speed;
+    [HideInInspector] public bool targetChanged;
+    [HideInInspector] public bool slowDown;
 
+    public float speed;
 
     private void Update()
     {
@@ -22,13 +23,20 @@ public class ModulePlatform : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, currentTarget.position);
 
+        if (distance < 6F)
+        {
+            slowDown = true;
+        }
+
         if (distance > 0.2F)
         {
+            targetChanged = false;
             Vector2 direction = currentTarget.position - transform.position;
             Vector2 movement = direction.normalized * speed * Time.deltaTime;
             transform.Translate(movement);
             return;
         }
+
         ChangeTarget();
     }
 
@@ -36,12 +44,16 @@ public class ModulePlatform : MonoBehaviour
     {
         int currentIndex = targets.IndexOf(currentTarget);
 
+        slowDown = false;
+
         if (currentIndex == targets.Count - 1)
         {
+            targetChanged = true;
             currentTarget = targets[0];
             return;
         }
 
         currentTarget = targets[currentIndex + 1];
+        targetChanged = true;
     }
 }
