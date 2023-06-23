@@ -28,7 +28,7 @@ public class AdvancedRespawn : MonoBehaviour
                 if (collider.gameObject.CompareTag("Death"))
                 {
                     deathInRange = true;
-                    Debug.Log(collider.name);
+                    //Debug.Log(collider.name);
                     return;
                 }
             }                
