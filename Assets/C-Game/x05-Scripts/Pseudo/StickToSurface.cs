@@ -17,11 +17,14 @@ public class StickToSurface : MonoBehaviour
     int layerMaskValue;
 
     public bool initWin;
-    
+
+    public AudioSource whenSticked;
 
     // temporary variables
     public static bool isNearSurface; 
     public static bool ableToStick;
+
+    private bool soundPlayed;
 
     private void Start()
     {
@@ -76,6 +79,12 @@ public class StickToSurface : MonoBehaviour
 
         if (isNearSurface && ableToStick)
         {
+            if ( !soundPlayed )
+            {
+                whenSticked.Play();
+                soundPlayed = true;
+            }
+
             TurnPhysicsOFF(rigidbody);
             isNearSurface = true;
         }
@@ -83,6 +92,7 @@ public class StickToSurface : MonoBehaviour
         {
             TurnPhysicsON(rigidbody);
             isNearSurface = false;
+            soundPlayed = false;
             StartCoroutine(Cooldown()); // Start the cooldown coroutin
         }
     }

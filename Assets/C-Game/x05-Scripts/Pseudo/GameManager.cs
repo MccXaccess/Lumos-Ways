@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
     // i think we can later make advanced respawn system like last time you died is gonna be shown...?
     [Tooltip("place for respawn on death")] public Transform safeSpot;
+    [Tooltip("place for next level in case you won")] public Transform nextLvlPosition;
 
     [Tooltip("put levels in order")] public List<GameObject> stages = new List<GameObject>();
 
@@ -24,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private StickToSurface stickToSurface;   
 
+    public TextMeshProUGUI textMeshProCurrentStage;
+    
     public bool IsAlive { get => isAlive; }
     public enum PlayerState
     {
@@ -34,15 +39,16 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
+        // if (Instance == null)
+        // {
+        //     Instance = this;
+        //     DontDestroyOnLoad(this);
+        // }
+        // else if (Instance != this)
+        // {
+        //     Destroy(gameObject);
+        // }
     }
     
     private void Start()
@@ -52,6 +58,42 @@ public class GameManager : MonoBehaviour
         stickToSurface = player.GetComponent<StickToSurface>();
         currentLevel = stages?[0];
         InitiateStages();
+    }
+
+    private IEnumerator AlphaAnimationCoroutine()
+    {
+        // Increase alpha from 0 to 1
+        float duration = 1f;
+        float elapsedTime = 0f;
+        Color startColor = textMeshProCurrentStage.color;
+        Color endColor = new Color(startColor.r, startColor.g, startColor.b, 1f);
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / duration);
+            Color newColor = Color.Lerp(startColor, endColor, t);
+            textMeshProCurrentStage.color = newColor;
+            yield return null;
+        }
+
+        // Wait for 0.5 seconds
+        yield return new WaitForSeconds(0.5f);
+
+        // Decrease alpha from 1 to 0
+        duration = 1f;
+        elapsedTime = 0f;
+        startColor = textMeshProCurrentStage.color;
+        endColor = new Color(startColor.r, startColor.g, startColor.b, 0f);
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / duration);
+            Color newColor = Color.Lerp(startColor, endColor, t);
+            textMeshProCurrentStage.color = newColor;
+            yield return null;
+        }
     }
 
     public void Dead()
@@ -104,6 +146,9 @@ public class GameManager : MonoBehaviour
         SetActive(stages, false);
         currentLevel.SetActive(true);
         stickToSurface.initWin = false;
+
+        textMeshProCurrentStage.text = currentLevel.name;
+        StartCoroutine(AlphaAnimationCoroutine());
     }
 
     private void NextStage(int index)
@@ -112,6 +157,10 @@ public class GameManager : MonoBehaviour
         SetActive(stages, false);
         currentLevel.SetActive(true);
         stickToSurface.initWin = false;
+        
+        textMeshProCurrentStage.text = currentLevel.name;
+        StartCoroutine(AlphaAnimationCoroutine());
+        
     }
 
     IEnumerator IENextStage()
@@ -131,11 +180,17 @@ public class GameManager : MonoBehaviour
             return;
         }
         NextStage(currentIndex);
-        return;
-    
+
+        // STOP TIME AND START TRANSITION
+
+        // RESUME TIME AND STOP TRANSITION
+
         // show ui 
-        // change level?
+        // transition
         // after pressed button boolean == false;
+
+        // in case if i want to make dynamic teleport to levels...
+        //transform.position = nextLvlPosition.position;
     }
 
     private void SetActive(List <GameObject> objects, bool state = false)

@@ -346,9 +346,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4032380323888699706}
   - component: {fileID: 7620307383019135260}
-  - component: {fileID: 803171094491792843}
+  - component: {fileID: 8206662275982475596}
   m_Layer: 9
-  m_Name: Spiked Triangle
+  m_Name: Spiked Block
   m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,7 +371,7 @@ Transform:
   - {fileID: 3534600894467912121}
   - {fileID: 1509177674309514814}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7620307383019135260
 SpriteRenderer:
@@ -425,8 +425,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &803171094491792843
-CircleCollider2D:
+--- !u!60 &8206662275982475596
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -458,5 +458,23 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1.5}
+      - {x: -0.55, y: 0.55}
+      - {x: -1.5, y: 0}
+      - {x: -0.55, y: -0.55}
+      - {x: 0, y: -1.5}
+      - {x: 0.55, y: -0.55}
+      - {x: 1.5, y: 0}
+      - {x: 0.55, y: 0.55}
+  m_UseDelaunayMesh: 0

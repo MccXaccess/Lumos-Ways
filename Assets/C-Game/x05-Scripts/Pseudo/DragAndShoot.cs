@@ -14,6 +14,8 @@ public class DragAndShoot : MonoBehaviour
     public bool forwardDraging = true;
     public bool showLineOnScreen = false;
 
+    public AudioSource whenJump;
+
     Transform direction;
     Rigidbody2D rb;
     LineRenderer line;
@@ -206,6 +208,7 @@ public class DragAndShoot : MonoBehaviour
     public void Shoot()
     {
         canShoot = false;
+        whenJump.Play();
         // rb.AddForce(new Vector2(5f, 10f), ForceMode2D.Impulse);
         rb.velocity = transform.right * shootPower;
     }
