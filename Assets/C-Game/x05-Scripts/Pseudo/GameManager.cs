@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
+using EasyTransition;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,6 +30,10 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI textMeshProCurrentStage;
     
+    public DemoLoadScene demoLoadScene;
+
+    public AudioSource whenDies;
+
     public bool IsAlive { get => isAlive; }
     public enum PlayerState
     {
@@ -98,8 +103,11 @@ public class GameManager : MonoBehaviour
 
     public void Dead()
     {
+        player.transform.parent.SetParent(null);
+        stickToSurface.isSqueezed = false;
         currentState = PlayerState.DEAD;
         isAlive = false;
+        whenDies.Play();
         Hide(player);
         Show(isDeadUI);
 
@@ -160,6 +168,7 @@ public class GameManager : MonoBehaviour
         
         textMeshProCurrentStage.text = currentLevel.name;
         StartCoroutine(AlphaAnimationCoroutine());
+        demoLoadScene.StartTransition();
         
     }
 
@@ -203,6 +212,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (stickToSurface.isSqueezed && currentState == PlayerState.ALIVE)
+        {
+            Dead();  
+        }
+
         if (Input.GetKey(KeyCode.R) && currentState == PlayerState.DEAD)
         {
             currentState = PlayerState.RESPAWN;

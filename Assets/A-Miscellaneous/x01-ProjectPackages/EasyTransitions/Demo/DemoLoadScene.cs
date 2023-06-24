@@ -13,8 +13,10 @@ namespace EasyTransition
         {
             TransitionManager.Instance().Transition(_sceneName, transition, startDelay);
         }   
+
+        public void StartTransition()
+        {
+            TransitionManager.Instance().Transition(transition, startDelay);
+        }
     }
-
 }
-
-

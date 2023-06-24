@@ -25,6 +25,10 @@ public class StickToSurface : MonoBehaviour
     public static bool ableToStick;
 
     private bool soundPlayed;
+    
+    [HideInInspector] public bool isSqueezed = false;
+    public float raycastDistance = 0.1f;
+
 
     private void Start()
     {
@@ -50,6 +54,18 @@ public class StickToSurface : MonoBehaviour
     private void Update()
     {
         centerPoint = transform.position;
+
+        RaycastHit2D hit1 = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, layerMask);
+        RaycastHit2D hit2 = Physics2D.Raycast(transform.position, Vector2.up, raycastDistance, layerMask);
+
+        if (hit1.collider != null && hit2.collider != null)
+        {
+            isSqueezed = true;
+        }
+        else
+        {
+            isSqueezed = false;
+        }
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(centerPoint, radius, layerMask);
 
@@ -77,22 +93,30 @@ public class StickToSurface : MonoBehaviour
             initWin = true;
         }
 
-        if (isNearSurface && ableToStick)
+        if ( rigidbody.velocity.y == 0 )
         {
             if ( !soundPlayed )
             {
-                whenSticked.Play();
                 soundPlayed = true;
+                whenSticked.Play();
             }
+        }
+        else
+        {
+            soundPlayed = false;
+        }
 
+        if (isNearSurface && ableToStick)
+        {
             TurnPhysicsOFF(rigidbody);
             isNearSurface = true;
         }
+
         else
         {
             TurnPhysicsON(rigidbody);
             isNearSurface = false;
-            soundPlayed = false;
+            
             StartCoroutine(Cooldown()); // Start the cooldown coroutin
         }
     }
