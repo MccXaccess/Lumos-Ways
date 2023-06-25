@@ -29,6 +29,9 @@ public class StickToSurface : MonoBehaviour
     [HideInInspector] public bool isSqueezed = false;
     public float raycastDistance = 0.1f;
 
+    private float lastTimeJumped;
+    public float TimeJumpAmount;
+
 
     private void Start()
     {
@@ -95,11 +98,14 @@ public class StickToSurface : MonoBehaviour
 
         if ( rigidbody.velocity.y == 0 )
         {
-            if ( !soundPlayed )
+            if ( !soundPlayed && lastTimeJumped <= 0 )
             {
+                lastTimeJumped = TimeJumpAmount;
                 soundPlayed = true;
                 whenSticked.Play();
+                return;
             }
+            lastTimeJumped -= Time.deltaTime;
         }
         else
         {
