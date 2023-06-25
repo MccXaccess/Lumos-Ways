@@ -267,3 +267,535 @@ Received Import Request.
 Start importing Assets/A-Miscellaneous/x01-ProjectPackages/Soft World/Prefabs/CirceSoft.prefab using Guid(936958b1246bd58459403a49ca07bee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dfffe8e8b4e536004afb2a2d2928f9a') in 0.005989 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 91
+========================================================================
+Received Import Request.
+  Time since last request: 660.794466 seconds.
+  path: Assets/C-Game/x04-Scenes/Stages/Main Stages.unity
+  artifactKey: Guid(be5f3a334c63be8c892bfc259910925d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x04-Scenes/Stages/Main Stages.unity using Guid(be5f3a334c63be8c892bfc259910925d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11101840a6f8f61365abd784819e0c11') in 0.002256 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.154133 seconds.
+  path: Assets/C-Game/x04-Scenes/Stages/Main Stages 1.unity
+  artifactKey: Guid(f06499f9dc29ba70893e90ee171cb4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x04-Scenes/Stages/Main Stages 1.unity using Guid(f06499f9dc29ba70893e90ee171cb4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b238eb3d7b5a0ba4ee0ecc4384168a50') in 0.007215 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.521574 seconds.
+  path: Assets/C-Game/x04-Scenes/Stages/Islam.unity
+  artifactKey: Guid(f06499f9dc29ba70893e90ee171cb4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x04-Scenes/Stages/Islam.unity using Guid(f06499f9dc29ba70893e90ee171cb4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0dd08f9c41a33d2f3e0ab643b137699') in 0.002158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 9303.832223 seconds.
+  path: Assets/B-Rendering/x05-Sprites/Icons/audio-muted.png
+  artifactKey: Guid(4529f5477f0fca2d2b5782c0a638567d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/B-Rendering/x05-Sprites/Icons/audio-muted.png using Guid(4529f5477f0fca2d2b5782c0a638567d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ced05f591d18c4d6bbdeb208222c539') in 0.005881 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/B-Rendering/x05-Sprites/Environment/backgroundIMG.png
+  artifactKey: Guid(f4ce3ec5111bddb459d663d6c718d973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/B-Rendering/x05-Sprites/Environment/backgroundIMG.png using Guid(f4ce3ec5111bddb459d663d6c718d973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48565a12468cbc9bc3279249cd0a8b8') in 0.005424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/A-Miscellaneous/x01-ProjectPackages/Soft World/Images/Background.png
+  artifactKey: Guid(ec8ec7ebfb2aa18469fbfbe36e3804a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/A-Miscellaneous/x01-ProjectPackages/Soft World/Images/Background.png using Guid(ec8ec7ebfb2aa18469fbfbe36e3804a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e9e100a8ad7e1ad14e6aec1695d4274') in 0.010604 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/B-Rendering/x05-Sprites/Icons/audio-unmuted.png
+  artifactKey: Guid(0e6602f5bbe0ebaebb17675ace8c3fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/B-Rendering/x05-Sprites/Icons/audio-unmuted.png using Guid(0e6602f5bbe0ebaebb17675ace8c3fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57ce599338ec578a2a937d9c9934e815') in 0.002352 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.408416 seconds.
+  path: Assets/B-Rendering/x05-Sprites/Icons/hand-pointer.jpg
+  artifactKey: Guid(4b2b8b20e8fa968119cf68e0541e2fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/B-Rendering/x05-Sprites/Icons/hand-pointer.jpg using Guid(4b2b8b20e8fa968119cf68e0541e2fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0551886a99dd34e6382dcbe32881339f') in 0.018356 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 23.610961 seconds.
+  path: Assets/B-Rendering/x05-Sprites/Icons/hand-pointer.jpg
+  artifactKey: Guid(4b2b8b20e8fa968119cf68e0541e2fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/B-Rendering/x05-Sprites/Icons/hand-pointer.jpg using Guid(4b2b8b20e8fa968119cf68e0541e2fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aec71a8d4d0f75281af9661e58581b9b') in 0.002494 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 4.652552 seconds.
+  path: Assets/B-Rendering/x05-Sprites/Icons/hand-pointer.jpg
+  artifactKey: Guid(4b2b8b20e8fa968119cf68e0541e2fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/B-Rendering/x05-Sprites/Icons/hand-pointer.jpg using Guid(4b2b8b20e8fa968119cf68e0541e2fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ddb8c610bc455ec3da4e2f960b0015') in 0.001451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 91.855310 seconds.
+  path: Assets/C-Game/x01-Animations/Animations/UI/New Animation.anim
+  artifactKey: Guid(95d41d27af3e952418aa08f0203ebc51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x01-Animations/Animations/UI/New Animation.anim using Guid(95d41d27af3e952418aa08f0203ebc51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79926219b0550db9573f3369c25cf95a') in 0.003888 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 9.895214 seconds.
+  path: Assets/C-Game/x01-Animations/Animations/UI/tutorial.anim
+  artifactKey: Guid(95d41d27af3e952418aa08f0203ebc51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x01-Animations/Animations/UI/tutorial.anim using Guid(95d41d27af3e952418aa08f0203ebc51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6924e3057592235872b5167f0dfb30e7') in 0.001451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 742.715545 seconds.
+  path: Assets/C-Game/x04-Scenes/Stages/Main Stages.unity
+  artifactKey: Guid(be5f3a334c63be8c892bfc259910925d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x04-Scenes/Stages/Main Stages.unity using Guid(be5f3a334c63be8c892bfc259910925d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608c5d11d0de3b0f2006044366ecb464') in 0.000598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 889.608165 seconds.
+  path: Assets/C-Game/x05-Scripts/Pseudo/TouchInputDetector.cs
+  artifactKey: Guid(23ffb913a534f4bc981e70370247c971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x05-Scripts/Pseudo/TouchInputDetector.cs using Guid(23ffb913a534f4bc981e70370247c971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833948f4560b0bcc93ea9ba5ae8a2bbf') in 0.001862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.274 seconds
+Refreshing native plugins compatible for Editor in 3.80 ms, found 1 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.104 seconds
+Domain Reload Profiling: 4376ms
+	BeginReloadAssembly (208ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (19ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (74ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (957ms)
+		LoadAssemblies (462ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (560ms)
+			TypeCache.Refresh (537ms)
+				TypeCache.ScanAssembly (518ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (3106ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1126ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (89ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (242ms)
+			ProcessInitializeOnLoadAttributes (565ms)
+			ProcessInitializeOnLoadMethodAttributes (210ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 6.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (2.3 MB). Loaded Objects now: 6463.
+Memory consumption went from 213.7 MB to 211.3 MB.
+Total: 7.274060 ms (FindLiveObjects: 0.643364 ms CreateObjectMapping: 0.580377 ms MarkObjects: 5.149172 ms  DeleteObjects: 0.898013 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 91.884339 seconds.
+  path: Assets/C-Game/x05-Scripts/Pseudo/TutorialElement.cs
+  artifactKey: Guid(8395aaac8e888d0e2980e9b1dc5510ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x05-Scripts/Pseudo/TutorialElement.cs using Guid(8395aaac8e888d0e2980e9b1dc5510ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66acfe9a03aae68bcf547dc34b9b1d18') in 0.007602 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 54.104925 seconds.
+  path: Assets/C-Game/x05-Scripts/Pseudo/TutorialElement.cs
+  artifactKey: Guid(8395aaac8e888d0e2980e9b1dc5510ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x05-Scripts/Pseudo/TutorialElement.cs using Guid(8395aaac8e888d0e2980e9b1dc5510ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ed79c95bff26af8f4efbd83c1a14cb') in 0.000760 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 18.127664 seconds.
+  path: Assets/C-Game/x05-Scripts/Pseudo/TutorialElement.cs
+  artifactKey: Guid(8395aaac8e888d0e2980e9b1dc5510ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/C-Game/x05-Scripts/Pseudo/TutorialElement.cs using Guid(8395aaac8e888d0e2980e9b1dc5510ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '724fb15b9f138be608a86c97d3ad97e7') in 0.001160 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.929 seconds
+Refreshing native plugins compatible for Editor in 3.20 ms, found 1 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.330 seconds
+Domain Reload Profiling: 2255ms
+	BeginReloadAssembly (199ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (16ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (79ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (636ms)
+		LoadAssemblies (299ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (398ms)
+			TypeCache.Refresh (375ms)
+				TypeCache.ScanAssembly (360ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1331ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (700ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (75ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (114ms)
+			ProcessInitializeOnLoadAttributes (397ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 4.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5784 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (2.3 MB). Loaded Objects now: 6481.
+Memory consumption went from 213.7 MB to 211.4 MB.
+Total: 8.799810 ms (FindLiveObjects: 0.569116 ms CreateObjectMapping: 0.585099 ms MarkObjects: 6.459408 ms  DeleteObjects: 1.184033 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.149 seconds
+Refreshing native plugins compatible for Editor in 5.19 ms, found 1 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.657 seconds
+Domain Reload Profiling: 2803ms
+	BeginReloadAssembly (187ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (18ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (859ms)
+		LoadAssemblies (353ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (565ms)
+			TypeCache.Refresh (533ms)
+				TypeCache.ScanAssembly (515ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (22ms)
+	FinalizeReload (1658ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (903ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (78ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (118ms)
+			ProcessInitializeOnLoadAttributes (502ms)
+			ProcessInitializeOnLoadMethodAttributes (185ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 5.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5784 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (2.3 MB). Loaded Objects now: 6498.
+Memory consumption went from 213.7 MB to 211.4 MB.
+Total: 9.648444 ms (FindLiveObjects: 0.817816 ms CreateObjectMapping: 0.803679 ms MarkObjects: 6.793542 ms  DeleteObjects: 1.230696 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.095 seconds
+Refreshing native plugins compatible for Editor in 3.38 ms, found 1 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.511 seconds
+Domain Reload Profiling: 2602ms
+	BeginReloadAssembly (233ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (17ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (78ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (738ms)
+		LoadAssemblies (391ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (434ms)
+			TypeCache.Refresh (410ms)
+				TypeCache.ScanAssembly (394ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1511ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (890ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (82ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (116ms)
+			ProcessInitializeOnLoadAttributes (414ms)
+			ProcessInitializeOnLoadMethodAttributes (260ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 7.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5784 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (2.3 MB). Loaded Objects now: 6515.
+Memory consumption went from 213.7 MB to 211.4 MB.
+Total: 13.328555 ms (FindLiveObjects: 0.553574 ms CreateObjectMapping: 0.877518 ms MarkObjects: 10.416839 ms  DeleteObjects: 1.478557 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.091 seconds
+Refreshing native plugins compatible for Editor in 3.51 ms, found 1 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.546 seconds
+Domain Reload Profiling: 2635ms
+	BeginReloadAssembly (203ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (19ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (76ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (792ms)
+		LoadAssemblies (369ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (482ms)
+			TypeCache.Refresh (459ms)
+				TypeCache.ScanAssembly (442ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1547ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (905ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (98ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (165ms)
+			ProcessInitializeOnLoadAttributes (481ms)
+			ProcessInitializeOnLoadMethodAttributes (142ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 6.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5784 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (2.3 MB). Loaded Objects now: 6532.
+Memory consumption went from 213.7 MB to 211.4 MB.
+Total: 12.492054 ms (FindLiveObjects: 0.858523 ms CreateObjectMapping: 0.509697 ms MarkObjects: 9.651568 ms  DeleteObjects: 1.469277 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mccxaccess/UnityWorkings/Lumos-Ways/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.166 seconds
+Refreshing native plugins compatible for Editor in 5.30 ms, found 1 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.772 seconds
+Domain Reload Profiling: 2934ms
+	BeginReloadAssembly (209ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (20ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (79ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (860ms)
+		LoadAssemblies (350ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (571ms)
+			TypeCache.Refresh (538ms)
+				TypeCache.ScanAssembly (520ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (23ms)
+	FinalizeReload (1772ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (996ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (99ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (153ms)
+			ProcessInitializeOnLoadAttributes (542ms)
+			ProcessInitializeOnLoadMethodAttributes (182ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 4.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5784 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (2.3 MB). Loaded Objects now: 6549.
+Memory consumption went from 213.7 MB to 211.4 MB.
+Total: 8.597589 ms (FindLiveObjects: 0.475285 ms CreateObjectMapping: 0.459023 ms MarkObjects: 6.548492 ms  DeleteObjects: 1.113243 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
