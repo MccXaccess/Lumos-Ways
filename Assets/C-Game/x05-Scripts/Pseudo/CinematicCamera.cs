@@ -42,31 +42,30 @@ public class CinematicCamera : MonoBehaviour
     private IEnumerator IncreaseOrtho()
     {
         float startTime = 0.0f;
-        float endTime = maxOrthoSize - defaultSize;
+        float endTime = maxOrthoSize - virtualCamera.m_Lens.OrthographicSize;
 
-        while (startTime < endTime)
+        while ( startTime < endTime )
         {
-            startTime += Time.deltaTime;
-            //Debug.Log($"from Increase startTime - {startTime} : endTime - {endTime}");
-            virtualCamera.m_Lens.OrthographicSize = defaultSize + startTime;
+            startTime += Time.deltaTime + 0.01f;
 
+            virtualCamera.m_Lens.OrthographicSize = defaultSize + startTime;
+            
             yield return null;
         }
     }
 
     private IEnumerator DecreaseOrtho()
     {
-        float startTime = maxOrthoSize - virtualCamera.m_Lens.OrthographicSize; 
-        float endTime = 0.0f;
+        float startTime = virtualCamera.m_Lens.OrthographicSize;
+        float endTime = defaultSize;
 
-        while (startTime > endTime)
+        while ( startTime > endTime )
         {
             startTime -= Time.deltaTime + 0.1f;
-            //Debug.Log($"from Decrease startTime - {startTime} : endTime - {endTime}");
-            virtualCamera.m_Lens.OrthographicSize = defaultSize + startTime;
 
+            virtualCamera.m_Lens.OrthographicSize = startTime;
+            
             yield return null;
         }
     }
-
 }
