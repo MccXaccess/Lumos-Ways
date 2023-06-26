@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         whenDies.Play();
         Hide(player);
         Show(isDeadUI);
-
+        
         if (deathParticles != null)
         {
             deathParticles.gameObject.transform.position = player.transform.position;
@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
         isAlive = true;
         Show(player);
         Hide(isDeadUI);
-        
+
         player.transform.position = safeSpot.position;
     }
 

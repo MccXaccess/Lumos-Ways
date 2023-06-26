@@ -33,6 +33,8 @@ public class DragAndShoot : MonoBehaviour
 
     float dist;
 
+    public StickToSurface stickToSurface;
+
     //public Trajectory trajectory;
     void Start()
     {
@@ -153,7 +155,7 @@ public class DragAndShoot : MonoBehaviour
     }
     void MouseRelease()
     {
-        StickToSurface.TurnPhysicsON(rb);
+        stickToSurface.TurnPhysicsON();
         StickToSurface.InitTakeoff();
         if (shootWhileMoving /*&& !EventSystem.current.IsPointerOverGameObject()*/)
         {
@@ -209,6 +211,7 @@ public class DragAndShoot : MonoBehaviour
     {
         canShoot = false;
         whenJump.Play();
+        stickToSurface.WhenShooted();
         // rb.AddForce(new Vector2(5f, 10f), ForceMode2D.Impulse);
         rb.velocity = transform.right * shootPower;
     }

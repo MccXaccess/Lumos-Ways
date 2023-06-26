@@ -22,7 +22,7 @@ public class StickToSurface : MonoBehaviour
 
     // temporary variables
     public static bool isNearSurface; 
-    public static bool ableToStick;
+    public static bool ableToStick = false;
 
     private bool soundPlayed;
     
@@ -46,21 +46,36 @@ public class StickToSurface : MonoBehaviour
 
         while (currentTime < lastTimeFixed)
         {
+            ableToStick = false;
             currentTime += Time.deltaTime;
             yield return null;
         }
 
         lastTimeTouched = currentTime;
-        ableToStick = true; // Set ableToStick to true after the cooldown
+        ableToStick = true;
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        transform.parent.SetParent(colliders[0].gameObject.transform);
+        if (other.gameObject.CompareTag("NextStage") && !initWin)
+        {
+            initWin = true;
+            return;
+        }
+
+        if (ableToStick)
+        {
+            TurnPhysicsOFF(rigidbody);
+
+            transform.parent.SetParent(other.gameObject.transform);
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D other) 
+    public void WhenShooted()
     {
+        StartCoroutine(Cooldown());
+
+        TurnPhysicsON(rigidbody);
         transform.parent.SetParent(null);
         soundPlayed = false;
     }
@@ -81,29 +96,25 @@ public class StickToSurface : MonoBehaviour
             isSqueezed = false;
         }
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(centerPoint, radius, layerMask);
+        // Collider2D[] colliders = Physics2D.OverlapCircleAll(centerPoint, radius, layerMask);
 
-        isNearSurface = colliders.Length > 0;
+        // isNearSurface = colliders.Length > 0;
 
-        if (isNearSurface ) //&& colliders[0].gameObject.CompareTag("Attachable"))
-        {
-            //TurnPhysicsOFF(rigidbody);
-            transform.parent.SetParent(colliders[0].gameObject.transform);
-            //isNearSurface = true;
-        }
-        else
-        {
-            //TurnPhysicsON(rigidbody);
-            transform.parent.SetParent(null);
-            soundPlayed = false;
-            //isNearSurface = false;
-        }
+        // if (isNearSurface ) //&& colliders[0].gameObject.CompareTag("Attachable"))
+        // {
+        //     //TurnPhysicsOFF(rigidbody);
+        //     transform.parent.SetParent(colliders[0].gameObject.transform);
+        //     //isNearSurface = true;
+        // }
+        // else
+        // {
+        //     //TurnPhysicsON(rigidbody);
+        //     transform.parent.SetParent(null);
+        //     soundPlayed = false;
+        //     //isNearSurface = false;
+        // }
 
         // i think those is near surfaces are not neccessary
-        if (isNearSurface && colliders[0].gameObject.CompareTag("NextStage") && !initWin)
-        {
-            initWin = true;
-        }
 
         if (rigidbody.velocity.y == 0 && rigidbody.velocity.x == 0 && !soundPlayed)
         {
@@ -131,13 +142,23 @@ public class StickToSurface : MonoBehaviour
     {
         ableToStick = false; // Set ableToStick to false when turning off physics
     }
-    public static void TurnPhysicsON(Rigidbody2D rb)
+    public void TurnPhysicsON(Rigidbody2D rb)
     {    
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
-    public static void TurnPhysicsOFF(Rigidbody2D rb)
+    public void TurnPhysicsON()
+    {    
+        rigidbody.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    public void TurnPhysicsOFF(Rigidbody2D rb)
     {
         rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    public void TurnPhysicsOFF()
+    {
+        rigidbody.bodyType = RigidbodyType2D.Static;
     }
 }
