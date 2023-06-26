@@ -22,17 +22,6 @@ public class AdvancedRespawn : MonoBehaviour
         {
             Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(10, 10), 0.0f, layerMask);
 
-
-            // foreach(Collider2D collider in colliders)
-            // {
-            //     if (collider.gameObject.CompareTag("Death"))
-            //     {
-            //         deathInRange = true;
-            //         //Debug.Log(collider.name);
-            //         return;
-            //     }
-            // }     
-
             foreach(Collider2D collider in colliders)
             {
                 deathInRange = true;

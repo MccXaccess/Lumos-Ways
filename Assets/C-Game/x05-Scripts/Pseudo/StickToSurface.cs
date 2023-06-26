@@ -54,6 +54,17 @@ public class StickToSurface : MonoBehaviour
         ableToStick = true; // Set ableToStick to true after the cooldown
     }
 
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        transform.parent.SetParent(colliders[0].gameObject.transform);
+    }
+
+    private void OnCollisionExit2D(Collision2D other) 
+    {
+        transform.parent.SetParent(null);
+        soundPlayed = false;
+    }
+
     private void Update()
     {
         centerPoint = transform.position;
@@ -74,20 +85,18 @@ public class StickToSurface : MonoBehaviour
 
         isNearSurface = colliders.Length > 0;
 
-        //BoxCollider2D col = colliders[].GetComponent<BoxCollider2D>();
-        
-        // if (col != null && col.usedByEffector)
-        // {
-        //     Debug.Log("something:");
-        // }
-
-        if (isNearSurface && colliders[0].gameObject.CompareTag("Attachable"))
+        if (isNearSurface ) //&& colliders[0].gameObject.CompareTag("Attachable"))
         {
+            //TurnPhysicsOFF(rigidbody);
             transform.parent.SetParent(colliders[0].gameObject.transform);
+            //isNearSurface = true;
         }
         else
         {
+            //TurnPhysicsON(rigidbody);
             transform.parent.SetParent(null);
+            soundPlayed = false;
+            //isNearSurface = false;
         }
 
         // i think those is near surfaces are not neccessary
@@ -96,35 +105,26 @@ public class StickToSurface : MonoBehaviour
             initWin = true;
         }
 
-        if ( rigidbody.velocity.y == 0 )
+        if (rigidbody.velocity.y == 0 && rigidbody.velocity.x == 0 && !soundPlayed)
         {
-            if ( !soundPlayed && lastTimeJumped <= 0 )
-            {
-                lastTimeJumped = TimeJumpAmount;
-                soundPlayed = true;
-                whenSticked.Play();
-                return;
-            }
-            lastTimeJumped -= Time.deltaTime;
-        }
-        else
-        {
-            soundPlayed = false;
+            whenSticked.Play();
+            soundPlayed = true;
         }
 
-        if (isNearSurface && ableToStick)
-        {
-            TurnPhysicsOFF(rigidbody);
-            isNearSurface = true;
-        }
+        // if (isNearSurface && ableToStick)
+        // {
+        //     TurnPhysicsOFF(rigidbody);
+        //     isNearSurface = true;
+        // }
 
-        else
-        {
-            TurnPhysicsON(rigidbody);
-            isNearSurface = false;
+        // else
+        // {
+        //     soundPlayed = false;
+        //     TurnPhysicsON(rigidbody);
+        //     isNearSurface = false;
             
-            StartCoroutine(Cooldown()); // Start the cooldown coroutin
-        }
+        //     StartCoroutine(Cooldown()); // Start the cooldown coroutin
+        // }
     }
 
     public static void InitTakeoff()
