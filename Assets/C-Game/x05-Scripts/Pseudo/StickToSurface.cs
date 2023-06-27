@@ -66,7 +66,7 @@ public class StickToSurface : MonoBehaviour
         if (ableToStick)
         {
             TurnPhysicsOFF(rigidbody);
-
+            
             transform.parent.SetParent(other.gameObject.transform);
         }
     }

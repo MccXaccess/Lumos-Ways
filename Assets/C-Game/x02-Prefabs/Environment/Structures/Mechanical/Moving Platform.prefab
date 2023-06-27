@@ -241,6 +241,8 @@ MonoBehaviour:
   - {fileID: 8788514832190022048}
   - {fileID: 5873407096317152284}
   - {fileID: 3182985723576299590}
+  targetChanged: 0
+  slowDown: 0
   speed: 3
 --- !u!1 &8760727246716656253
 GameObject:
