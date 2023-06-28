@@ -17,7 +17,7 @@ GameObject:
   m_Layer: 9
   m_Name: Next Stage
   m_TagString: NextStage
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1

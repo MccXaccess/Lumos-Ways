@@ -63,6 +63,11 @@ public class StickToSurface : MonoBehaviour
             return;
         }
 
+        if (other.gameObject.CompareTag("Trampoline"))
+        {
+            return;
+        }
+
         if (ableToStick)
         {
             TurnPhysicsOFF(rigidbody);

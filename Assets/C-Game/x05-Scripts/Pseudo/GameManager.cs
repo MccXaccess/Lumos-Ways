@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     // i think we can later make advanced respawn system like last time you died is gonna be shown...?
     [Tooltip("place for respawn on death")] public Transform safeSpot;
-    [Tooltip("place for next level in case you won")] public Transform nextLvlPosition;
+    [Tooltip("place for start point")] public Transform startPos;
 
     [Tooltip("put levels in order")] public List<GameObject> stages = new List<GameObject>();
 
@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
         stickToSurface = player.GetComponent<StickToSurface>();
         currentLevel = stages?[0];
         InitiateStages();
+        player.transform.position = startPos.position;
     }
 
     private IEnumerator AlphaAnimationCoroutine()
