@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("put levels in order")] public List<GameObject> stages = new List<GameObject>();
 
+    [Tooltip("soundtracks")] public List<AudioSource> HMsoundtracks = new List<AudioSource>();
+
     private GameObject currentLevel;
 
     private bool isAlive;
@@ -155,6 +157,7 @@ public class GameManager : MonoBehaviour
         SetActive(stages, false);
         currentLevel.SetActive(true);
         stickToSurface.initWin = false;
+        HMsoundtracks[0].gameObject.SetActive(true);
 
         textMeshProCurrentStage.text = currentLevel.name;
         StartCoroutine(AlphaAnimationCoroutine());
@@ -166,7 +169,9 @@ public class GameManager : MonoBehaviour
         SetActive(stages, false);
         currentLevel.SetActive(true);
         stickToSurface.initWin = false;
-        
+
+        HMsoundtracks[index + 1].gameObject.SetActive(true);
+
         textMeshProCurrentStage.text = currentLevel.name;
         StartCoroutine(AlphaAnimationCoroutine());
         demoLoadScene.StartTransition();
@@ -181,7 +186,9 @@ public class GameManager : MonoBehaviour
 
     private void InitWin()
     {
+        
         int currentIndex = stages.IndexOf(currentLevel);
+        HMsoundtracks[currentIndex].gameObject.SetActive(false);
 
         if (currentIndex >= stages.Count - 1)
         {

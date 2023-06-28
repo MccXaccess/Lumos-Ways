@@ -33,6 +33,8 @@ public class DragAndShoot : MonoBehaviour
 
     float dist;
 
+    private bool isDragging;
+
     public StickToSurface stickToSurface;
 
     //public Trajectory trajectory;
@@ -52,13 +54,18 @@ public class DragAndShoot : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (isDragging && Input.GetKeyDown(KeyCode.Escape))
+        {
+            MouseCancel();
+        }
+
+        if (Input.GetMouseButtonDown(0) && rb.velocity.y == 0)
         {
             // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DONT WANT TO IGNORE UI
             //trajectory.Show();
             MouseClick();
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && rb.velocity.y == 0)
         {
             // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DONT WANT TO IGNORE UI
 
@@ -70,7 +77,7 @@ public class DragAndShoot : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && rb.velocity.y == 0)
         {
             // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DONT WANT TO IGNORE UI
             MouseRelease();
@@ -88,6 +95,12 @@ public class DragAndShoot : MonoBehaviour
         }
     }
 
+    private void MouseCancel()
+    {
+        isDragging = false;
+        ResetLines();
+    }
+
     // MOUSE INPUTS
     void MouseClick()
     {
@@ -97,6 +110,7 @@ public class DragAndShoot : MonoBehaviour
             transform.right = dir * 1;
 
             startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            isDragging = true;
         }
         else
         {
@@ -106,13 +120,15 @@ public class DragAndShoot : MonoBehaviour
                 transform.right = dir * 1;
 
                 startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                isDragging = true;
             }
         }
 
     }
     void MouseDrag()
     {
-        if (shootWhileMoving)
+        if (shootWhileMoving && isDragging)
         {
             LookAtShootDirection();
             DrawLine();
@@ -132,7 +148,7 @@ public class DragAndShoot : MonoBehaviour
         }
         else
         {
-            if (canShoot)
+            if (canShoot && isDragging)
             {
                 LookAtShootDirection();
                 DrawLine();
@@ -155,9 +171,17 @@ public class DragAndShoot : MonoBehaviour
     }
     void MouseRelease()
     {
-        stickToSurface.TurnPhysicsON();
-        StickToSurface.InitTakeoff();
-        if (shootWhileMoving /*&& !EventSystem.current.IsPointerOverGameObject()*/)
+        if (!isDragging)
+        {
+            return;
+        }
+        else
+        {
+            stickToSurface.TurnPhysicsON();
+            StickToSurface.InitTakeoff();
+        }
+
+        if (shootWhileMoving && !EventSystem.current.IsPointerOverGameObject())
         {
             Shoot();
             screenLine.enabled = false;
@@ -165,14 +189,13 @@ public class DragAndShoot : MonoBehaviour
         }
         else
         {
-            if (canShoot /*&& !EventSystem.current.IsPointerOverGameObject()*/)
+            if (canShoot && !EventSystem.current.IsPointerOverGameObject())
             {
                 Shoot();
                 screenLine.enabled = false;
                 line.enabled = false;
             }
         }
-
     }
 
 
@@ -219,8 +242,7 @@ public class DragAndShoot : MonoBehaviour
 
     void DrawScreenLine()
     {
-
-
+        screenLine.enabled = false;
 
         screenLine.positionCount = 1;
         screenLine.SetPosition(0, startMousePos);
@@ -243,6 +265,7 @@ public class DragAndShoot : MonoBehaviour
 
     void DrawLine()
     {
+        line.enabled = false;
 
         startPosition = transform.position;
 
@@ -257,5 +280,10 @@ public class DragAndShoot : MonoBehaviour
 
     //Vector3[] positions;
 
-
+    void ResetLines()
+    {
+        screenLine.enabled = false;
+        
+        line.enabled = false;
+    }
 }

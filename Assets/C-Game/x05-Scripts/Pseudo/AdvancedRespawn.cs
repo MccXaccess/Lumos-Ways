@@ -5,11 +5,14 @@ using UnityEngine;
 public class AdvancedRespawn : MonoBehaviour
 {
     public Transform RespawnPoint;
-    public LayerMask layerMask;
 
     private Rigidbody2D rigidbody2D;
-    
-    private bool deathInRange;
+
+    private float timeElapsed;
+    public float maxTime;
+
+    private Vector3 currentPos;
+    private Vector3 previousPos;
 
     private void Start()
     {
@@ -18,17 +21,19 @@ public class AdvancedRespawn : MonoBehaviour
 
     private void Update()
     {
-        if ( rigidbody2D.velocity.y == 0 )
+        previousPos = transform.position;
+
+        if ( rigidbody2D.velocity.y == 0 && currentPos == previousPos )
         {
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(10, 10), 0.0f, layerMask);
+            timeElapsed += Time.deltaTime;
 
-            foreach(Collider2D collider in colliders)
+            if (timeElapsed > maxTime)
             {
-                deathInRange = true;
-                return;
-            }               
-
-            RespawnPoint.position = transform.position;
+                RespawnPoint.position = transform.position;
+                timeElapsed = 0;
+            }
         }
+
+        currentPos = transform.position;
     }
 }
