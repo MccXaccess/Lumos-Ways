@@ -54,7 +54,7 @@ public class DragAndShoot : MonoBehaviour
     
     void Update()
     {
-        if (isDragging && Input.GetKeyDown(KeyCode.Escape))
+        if (isDragging && Input.GetKeyDown(KeyCode.E))
         {
             MouseCancel();
         }
@@ -177,11 +177,12 @@ public class DragAndShoot : MonoBehaviour
         }
         else
         {
+            isDragging = false;
             stickToSurface.TurnPhysicsON();
             StickToSurface.InitTakeoff();
         }
 
-        if (shootWhileMoving && !EventSystem.current.IsPointerOverGameObject())
+        if (shootWhileMoving ) // !EventSystem.current.IsPointerOverGameObject())
         {
             Shoot();
             screenLine.enabled = false;
@@ -189,7 +190,7 @@ public class DragAndShoot : MonoBehaviour
         }
         else
         {
-            if (canShoot && !EventSystem.current.IsPointerOverGameObject())
+            if (canShoot ) // !EventSystem.current.IsPointerOverGameObject())
             {
                 Shoot();
                 screenLine.enabled = false;
@@ -242,7 +243,6 @@ public class DragAndShoot : MonoBehaviour
 
     void DrawScreenLine()
     {
-        screenLine.enabled = false;
 
         screenLine.positionCount = 1;
         screenLine.SetPosition(0, startMousePos);
@@ -265,7 +265,6 @@ public class DragAndShoot : MonoBehaviour
 
     void DrawLine()
     {
-        line.enabled = false;
 
         startPosition = transform.position;
 

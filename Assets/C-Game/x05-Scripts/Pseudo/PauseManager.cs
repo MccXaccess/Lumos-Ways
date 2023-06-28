@@ -12,5 +12,7 @@ public class PauseManager : MonoBehaviour
         {
             i.SetActive(state);
         }
+
+        Time.timeScale = state ? 0 : 1;
     }
 }
