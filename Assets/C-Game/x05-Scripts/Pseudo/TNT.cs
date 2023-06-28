@@ -16,9 +16,16 @@ public class TNT : MonoBehaviour
         foreach (Collider2D collider in colliders)
         {
             Rigidbody2D rb = collider.GetComponent<Rigidbody2D>();
-            
+
             if (rb != null)
             {
+                Vector2 explosionDir = collider.transform.position - transform.position;
+                rb.AddForce(explosionDir.normalized * explosionForce, ForceMode2D.Impulse);
+            }
+
+            if (rb != null && rb.gameObject.CompareTag("Player"))
+            {
+                rb.bodyType = RigidbodyType2D.Dynamic;
                 Vector2 explosionDir = collider.transform.position - transform.position;
                 rb.AddForce(explosionDir.normalized * explosionForce, ForceMode2D.Impulse);
             }
@@ -36,7 +43,9 @@ public class TNT : MonoBehaviour
         Explode();
         explosionParticle.transform.position = transform.position;
         explosionParticle.Play();
-        Destroy(gameObject);
+        explosionSound.Play();
+        // destroy the parent here
+        Destroy(transform.parent.gameObject, 1);
     }
 }
 
