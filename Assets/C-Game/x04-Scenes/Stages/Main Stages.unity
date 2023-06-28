@@ -31722,6 +31722,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3532841695966623493, guid: c46eeb5c1d32affbcb5456a4abcf95f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4226063395710767114, guid: c46eeb5c1d32affbcb5456a4abcf95f7, type: 3}
       propertyPath: stickToSurface
       value: 
@@ -31769,6 +31773,10 @@ PrefabInstance:
     - target: {fileID: 4617549246734200077, guid: c46eeb5c1d32affbcb5456a4abcf95f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188159655538970910, guid: c46eeb5c1d32affbcb5456a4abcf95f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6878076834210574608, guid: c46eeb5c1d32affbcb5456a4abcf95f7, type: 3}
       propertyPath: m_Name
