@@ -10076,7 +10076,6 @@ GameObject:
   - component: {fileID: 2089265211357249074}
   - component: {fileID: 2880035537372723351}
   - component: {fileID: 5611147030122768843}
-  - component: {fileID: 5436870968138657686}
   - component: {fileID: 2308110520559171891}
   m_Layer: 11
   m_Name: Physical Controller
@@ -10410,6 +10409,7 @@ MonoBehaviour:
   forwardDraging: 0
   showLineOnScreen: 1
   whenJump: {fileID: 3516515756110944268}
+  stickToSurface: {fileID: 0}
 --- !u!114 &2880035537372723351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10432,6 +10432,7 @@ MonoBehaviour:
   whenSticked: {fileID: 4384549208521869456}
   isSqueezed: 0
   raycastDistance: 0.8
+  TimeJumpAmount: 0
 --- !u!114 &5611147030122768843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10511,18 +10512,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &5436870968138657686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4879773635300750224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb75d35c5dd64c57b0a0ee5347528bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2308110520559171891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10536,9 +10525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RespawnPoint: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
+  maxTime: 0
 --- !u!1 &5018082007990501060
 GameObject:
   m_ObjectHideFlags: 0

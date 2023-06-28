@@ -33,8 +33,6 @@ public class DragAndShoot : MonoBehaviour
 
     float dist;
 
-    private bool isDragging;
-
     public StickToSurface stickToSurface;
 
     //public Trajectory trajectory;
@@ -54,10 +52,6 @@ public class DragAndShoot : MonoBehaviour
     
     void Update()
     {
-        if (isDragging && Input.GetKeyDown(KeyCode.E))
-        {
-            MouseCancel();
-        }
 
         if (Input.GetMouseButtonDown(0) && rb.velocity.y == 0)
         {
@@ -95,12 +89,6 @@ public class DragAndShoot : MonoBehaviour
         }
     }
 
-    private void MouseCancel()
-    {
-        isDragging = false;
-        ResetLines();
-    }
-
     // MOUSE INPUTS
     void MouseClick()
     {
@@ -110,7 +98,7 @@ public class DragAndShoot : MonoBehaviour
             transform.right = dir * 1;
 
             startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            isDragging = true;
+
         }
         else
         {
@@ -121,14 +109,13 @@ public class DragAndShoot : MonoBehaviour
 
                 startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-                isDragging = true;
             }
         }
 
     }
     void MouseDrag()
     {
-        if (shootWhileMoving && isDragging)
+        if (shootWhileMoving)
         {
             LookAtShootDirection();
             DrawLine();
@@ -148,7 +135,7 @@ public class DragAndShoot : MonoBehaviour
         }
         else
         {
-            if (canShoot && isDragging)
+            if (canShoot)
             {
                 LookAtShootDirection();
                 DrawLine();
@@ -171,16 +158,8 @@ public class DragAndShoot : MonoBehaviour
     }
     void MouseRelease()
     {
-        if (!isDragging)
-        {
-            return;
-        }
-        else
-        {
-            isDragging = false;
-            stickToSurface.TurnPhysicsON();
-            StickToSurface.InitTakeoff();
-        }
+        stickToSurface.TurnPhysicsON();
+        StickToSurface.InitTakeoff();
 
         if (shootWhileMoving ) // !EventSystem.current.IsPointerOverGameObject())
         {
@@ -275,14 +254,5 @@ public class DragAndShoot : MonoBehaviour
 
         line.positionCount = 2;
         line.SetPosition(1, targetPosition);
-    }
-
-    //Vector3[] positions;
-
-    void ResetLines()
-    {
-        screenLine.enabled = false;
-        
-        line.enabled = false;
     }
 }

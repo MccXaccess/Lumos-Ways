@@ -55,31 +55,11 @@ public class StickToSurface : MonoBehaviour
         ableToStick = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
-    {
-        if (other.gameObject.CompareTag("NextStage") && !initWin)
-        {
-            initWin = true;
-            return;
-        }
-
-        if (other.gameObject.CompareTag("Trampoline"))
-        {
-            return;
-        }
-
-        if (ableToStick)
-        {
-            TurnPhysicsOFF(rigidbody);
-            
-            transform.parent.SetParent(other.gameObject.transform);
-        }
-    }
-
     public void WhenShooted()
     {
         StartCoroutine(Cooldown());
 
+        isNearSurface = false;
         TurnPhysicsON(rigidbody);
         transform.parent.SetParent(null);
         soundPlayed = false;
@@ -101,18 +81,46 @@ public class StickToSurface : MonoBehaviour
             isSqueezed = false;
         }
 
-        // Collider2D[] colliders = Physics2D.OverlapCircleAll(centerPoint, radius, layerMask);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(centerPoint, radius, layerMask);
 
-        // isNearSurface = colliders.Length > 0;
-
-        // if (isNearSurface ) //&& colliders[0].gameObject.CompareTag("Attachable"))
+        // if (ableToStick && colliders != null)
         // {
-        //     //TurnPhysicsOFF(rigidbody);
+        //     TurnPhysicsOFF(rigidbody);
+            
         //     transform.parent.SetParent(colliders[0].gameObject.transform);
-        //     //isNearSurface = true;
         // }
-        // else
-        // {
+
+        isNearSurface = colliders.Length > 0;
+
+        if (isNearSurface && colliders[0]?.CompareTag("Death") == true)
+        {
+            if (GameManager.Instance.IsAlive)
+            {
+                GameManager.Instance.Dead();
+                return;
+            }
+        }
+
+        if (isNearSurface && colliders[0]?.CompareTag("NextStage") == true && !initWin)
+        {
+            initWin = true;
+            return;
+        }
+
+        // !YOU CAN SKIP DOING CHECK FOR NULL BECAUSE IT DOESNT MAKE SENSE BECUASE ISNEARSURFACE IS ALREADY DOING IT. SHIT
+        if (isNearSurface && colliders[0]?.CompareTag("Trampoline") == true)
+        {
+            return;
+        }
+
+        if (isNearSurface && ableToStick) //&& colliders[0].gameObject.CompareTag("Attachable"))
+        {
+            TurnPhysicsOFF(rigidbody);
+            transform.parent.SetParent(colliders[0].gameObject.transform);
+        }
+
+        //else
+        //{
         //     //TurnPhysicsON(rigidbody);
         //     transform.parent.SetParent(null);
         //     soundPlayed = false;
