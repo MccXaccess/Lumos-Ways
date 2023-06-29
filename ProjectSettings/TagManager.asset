@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Death
   - NextStage
-  - Trampoline
-  - Attachable
+  - Ignore But Can Shoot
+  - Ignore But Cannot Shoot
   layers:
   - Default
   - TransparentFX

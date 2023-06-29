@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StickToSurface : MonoBehaviour
 {
+    private DragAndShoot dragAndShoot;
+
     public float radius = 2.5f;
     public Vector2 centerPoint;
     [SerializeField] private LayerMask layerMask;
@@ -20,9 +22,14 @@ public class StickToSurface : MonoBehaviour
 
     public AudioSource whenSticked;
 
+    public bool onSpecificInteraction;
+
     // temporary variables
-    public static bool isNearSurface; 
-    public static bool ableToStick = false;
+    // ! this was set to true ( is near surface ) becuase the first hit was always late due to false at start (recommended to put almost everthing to true at init )
+    // ! to avoid any unnecessary problems
+    // ~ when you will refactor the code i know you will start from here ( i guess ) and then you will need to include almost everything because it's everythnign for game
+    public static bool isNearSurface = true; 
+    public static bool ableToStick = true;
 
     private bool soundPlayed;
     
@@ -35,6 +42,7 @@ public class StickToSurface : MonoBehaviour
 
     private void Start()
     {
+        dragAndShoot = GetComponent<DragAndShoot>();
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
 
         layerMaskValue = layerMask.value;
@@ -58,7 +66,7 @@ public class StickToSurface : MonoBehaviour
     public void WhenShooted()
     {
         StartCoroutine(Cooldown());
-
+        onSpecificInteraction = false;
         isNearSurface = false;
         TurnPhysicsON(rigidbody);
         transform.parent.SetParent(null);
@@ -104,16 +112,26 @@ public class StickToSurface : MonoBehaviour
         if (isNearSurface && colliders[0]?.CompareTag("NextStage") == true && !initWin)
         {
             initWin = true;
+            colliders[0].gameObject.SetActive(false);
+            GameManager.Instance.InitWin();
+            initWin = false;
             return;
         }
 
         // !YOU CAN SKIP DOING CHECK FOR NULL BECAUSE IT DOESNT MAKE SENSE BECUASE ISNEARSURFACE IS ALREADY DOING IT. SHIT
-        if (isNearSurface && colliders[0]?.CompareTag("Trampoline") == true)
+        if (isNearSurface && colliders[0]?.CompareTag("Ignore But Cannot Shoot") == true)
         {
             return;
         }
 
-        if (isNearSurface && ableToStick) //&& colliders[0].gameObject.CompareTag("Attachable"))
+        if (isNearSurface && colliders[0]?.CompareTag("Ignore But Can Shoot") == true)
+        {
+            dragAndShoot.canShoot = true;
+            onSpecificInteraction = true;
+            return;
+        }
+
+        if (isNearSurface && ableToStick)
         {
             TurnPhysicsOFF(rigidbody);
             transform.parent.SetParent(colliders[0].gameObject.transform);

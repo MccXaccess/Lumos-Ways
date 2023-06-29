@@ -29,7 +29,7 @@ public class DragAndShoot : MonoBehaviour
 
     // direction of the mouse
     Vector2 dire;
-    bool canShoot = true;
+    [HideInInspector] public bool canShoot = false;
 
     float dist;
 
@@ -38,6 +38,7 @@ public class DragAndShoot : MonoBehaviour
     //public Trajectory trajectory;
     void Start()
     {
+        canShoot = false;
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = gravity;
         line = GetComponent<LineRenderer>();
@@ -49,20 +50,20 @@ public class DragAndShoot : MonoBehaviour
 	{
 		rb.AddForce (force * 50, ForceMode2D.Impulse);
 	}
-    
+
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && rb.velocity.y == 0)
+        if ((Input.GetMouseButtonDown(0) && rb.velocity.y == 0) || stickToSurface.onSpecificInteraction)
         {
-            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DONT WANT TO IGNORE UI
-            //trajectory.Show();
+            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DON'T WANT TO IGNORE UI
+            // trajectory.Show();
             MouseClick();
         }
-        if (Input.GetMouseButton(0) && rb.velocity.y == 0)
-        {
-            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DONT WANT TO IGNORE UI
 
+        if ((Input.GetMouseButton(0) && rb.velocity.y == 0) || stickToSurface.onSpecificInteraction)
+        {
+            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DON'T WANT TO IGNORE UI
             MouseDrag();
 
             //trajectory.UpdateDots(transform.position, new Vector2(dire.x / 10 * shootPower, dire.y / 10 * shootPower));
@@ -71,23 +72,23 @@ public class DragAndShoot : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonUp(0) && rb.velocity.y == 0)
+        if ((Input.GetMouseButtonUp(0) && rb.velocity.y == 0) || stickToSurface.onSpecificInteraction)
         {
-            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DONT WANT TO IGNORE UI
+            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DON'T WANT TO IGNORE UI
             MouseRelease();
             //trajectory.Hide ();
         }
 
-
         if (shootWhileMoving)
             return;
 
-        if (rb.velocity.magnitude < 0.2f)
+        if (rb.velocity.magnitude == 0)
         {
-            //rb.velocity = new Vector2(0, 0); //ENABLE THIS IF YOU WANT THE BALL TO STOP IF ITS MOVING SO SLOW
+            //rb.velocity = new Vector2(0, 0); //ENABLE THIS IF YOU WANT THE BALL TO STOP IF IT'S MOVING SO SLOW
             canShoot = true;
         }
     }
+
 
     // MOUSE INPUTS
     void MouseClick()
@@ -98,21 +99,18 @@ public class DragAndShoot : MonoBehaviour
             transform.right = dir * 1;
 
             startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            return;
         }
-        else
+
+        if (canShoot)
         {
-            if (canShoot)
-            {
-                Vector2 dir = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                transform.right = dir * 1;
+            Vector2 dir = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.right = dir * 1;
 
-                startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            }
+            startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-
     }
+
     void MouseDrag()
     {
         if (shootWhileMoving)
@@ -132,30 +130,30 @@ public class DragAndShoot : MonoBehaviour
                 if (showLineOnScreen)
                     screenLine.enabled = true;
             }
+
+            return;
         }
-        else
+
+        if (canShoot)
         {
-            if (canShoot)
+            LookAtShootDirection();
+            DrawLine();
+
+            if (showLineOnScreen)
+                DrawScreenLine();
+
+            float distance = Vector2.Distance(currentMousePos, startMousePos);
+
+            if (distance > 1)
             {
-                LookAtShootDirection();
-                DrawLine();
+                line.enabled = true;
 
                 if (showLineOnScreen)
-                    DrawScreenLine();
-
-                float distance = Vector2.Distance(currentMousePos, startMousePos);
-
-                if (distance > 1)
-                {
-                    line.enabled = true;
-
-                    if (showLineOnScreen)
-                        screenLine.enabled = true;
-                }
+                    screenLine.enabled = true;
             }
         }
-
     }
+
     void MouseRelease()
     {
         stickToSurface.TurnPhysicsON();
@@ -166,15 +164,14 @@ public class DragAndShoot : MonoBehaviour
             Shoot();
             screenLine.enabled = false;
             line.enabled = false;
+            return;
         }
-        else
+        
+        if (canShoot) // !EventSystem.current.IsPointerOverGameObject())
         {
-            if (canShoot ) // !EventSystem.current.IsPointerOverGameObject())
-            {
-                Shoot();
-                screenLine.enabled = false;
-                line.enabled = false;
-            }
+            Shoot();
+            screenLine.enabled = false;
+            line.enabled = false;
         }
     }
 

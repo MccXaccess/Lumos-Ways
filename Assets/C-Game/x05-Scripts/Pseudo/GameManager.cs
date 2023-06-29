@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public AudioSource whenDies;
 
+    public bool ignoreLevel;
+
     public bool IsAlive { get => isAlive; }
     public enum PlayerState
     {
@@ -63,9 +65,15 @@ public class GameManager : MonoBehaviour
         isAlive = true;
         currentState = PlayerState.ALIVE;
         stickToSurface = player.GetComponent<StickToSurface>();
-        currentLevel = stages?[0];
-        InitiateStages();
+
+        if (ignoreLevel)
+        {
+            return;
+        }
+
         player.transform.position = startPos.position;
+        currentLevel = stages?[0];    
+        InitiateStages();
     }
 
     private IEnumerator AlphaAnimationCoroutine()
@@ -156,7 +164,6 @@ public class GameManager : MonoBehaviour
     {
         SetActive(stages, false);
         currentLevel.SetActive(true);
-        stickToSurface.initWin = false;
         HMsoundtracks[0].gameObject.SetActive(true);
 
         textMeshProCurrentStage.text = currentLevel.name;
@@ -165,28 +172,26 @@ public class GameManager : MonoBehaviour
 
     private void NextStage(int index)
     {
+        player.transform.parent.SetParent(null);
         currentLevel = stages[index + 1];
         SetActive(stages, false);
         currentLevel.SetActive(true);
-        stickToSurface.initWin = false;
-
+        stickToSurface.TurnPhysicsON();
         HMsoundtracks[index + 1].gameObject.SetActive(true);
 
         textMeshProCurrentStage.text = currentLevel.name;
-        StartCoroutine(AlphaAnimationCoroutine());
-        demoLoadScene.StartTransition();
-        
+        demoLoadScene?.StartTransition();
+        StartCoroutine(AlphaAnimationCoroutine());        
     }
 
-    IEnumerator IENextStage()
+    IEnumerator IENextStage(int index)
     {
-         
-        yield return new  WaitForSeconds(0.25F);
+        yield return new WaitForSeconds(0.5F);
+        NextStage(index);
     }
 
-    private void InitWin()
+    public void InitWin()
     {
-        
         int currentIndex = stages.IndexOf(currentLevel);
         HMsoundtracks[currentIndex].gameObject.SetActive(false);
 
@@ -196,7 +201,8 @@ public class GameManager : MonoBehaviour
             InitiateStages();
             return;
         }
-        NextStage(currentIndex);
+
+        StartCoroutine(IENextStage(currentIndex));
 
         // STOP TIME AND START TRANSITION
 
@@ -228,11 +234,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.R) && currentState == PlayerState.DEAD)
         {
             currentState = PlayerState.RESPAWN;
-        }
-
-        if (stickToSurface.initWin)
-        {
-            InitWin();
         }
 
         switch (currentState)

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2156969141503996035}
   m_Layer: 9
   m_Name: Trampoline Normal
-  m_TagString: Trampoline
+  m_TagString: Ignore But Cannot Shoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
