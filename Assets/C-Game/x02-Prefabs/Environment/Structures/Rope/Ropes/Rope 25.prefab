@@ -1343,7 +1343,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.8393751}
+  m_ConnectedAnchor: {x: 0, y: -0.83936965}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3630,8 +3630,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -6.205018, y: 0.8015671}
-  m_ConnectedAnchor: {x: -14.605018, y: 43.801567}
+  m_Anchor: {x: -5, y: 0}
+  m_ConnectedAnchor: {x: -74.25, y: 21.47}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4214,7 +4214,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.8396476}
+  m_ConnectedAnchor: {x: 0, y: -0.8396421}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4878,7 +4878,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.5866733, y: 6.9106464}
+  m_ConnectedAnchor: {x: 0.90627235, y: -6.9999986}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -5487,7 +5487,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.367602, y: -6.8934107}
+  m_ConnectedAnchor: {x: 0.90627295, y: 6.9999986}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -6354,8 +6354,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 5.9873886, y: 0.5013046}
-  m_ConnectedAnchor: {x: -16.212612, y: 43.901306}
+  m_Anchor: {x: 5, y: 0}
+  m_ConnectedAnchor: {x: -78.25, y: 21.47}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -7933,7 +7933,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.8394296}
+  m_ConnectedAnchor: {x: 0, y: -0.83943504}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -8530,7 +8530,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.83971024}
+  m_ConnectedAnchor: {x: 0, y: -0.839713}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -8590,7 +8590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9210385273273068734}
   m_Layer: 9
-  m_Name: part 1
+  m_Name: rope 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8604,7 +8604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7809775679608615602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.8, y: -0.1, z: 0}
+  m_LocalPosition: {x: -7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9244,7 +9244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2520035720325129733}
   m_Layer: 9
-  m_Name: part 2
+  m_Name: rope 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9258,7 +9258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8210963661412638323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -0.5, z: 0}
+  m_LocalPosition: {x: 7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9920,7 +9920,7 @@ Transform:
   - {fileID: 2520035720325129733}
   - {fileID: 4003187419609042549}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725769566970957618
 GameObject:
@@ -10346,11 +10346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.87
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10358,19 +10358,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6910749
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7227832
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10382,11 +10382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4860649938882905993, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -92.57
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4868012565827200031, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_Name
-      value: Block Pallette 0 (6)
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 4868012565827200031, guid: 50b0752c54faefbdea03918a46402864, type: 3}
       propertyPath: m_IsActive

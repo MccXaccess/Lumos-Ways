@@ -4,6 +4,7 @@ public class RotateObject : MonoBehaviour
 {
     public float rotationSpeed = 100f; 
     public float rotationSpeedMax = 100f;
+    public float rotationDegreesLimit = 360f;
     
     [Tooltip("if false rotates right")] public bool directionLeft;
 

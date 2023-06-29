@@ -121,11 +121,13 @@ public class StickToSurface : MonoBehaviour
         // !YOU CAN SKIP DOING CHECK FOR NULL BECAUSE IT DOESNT MAKE SENSE BECUASE ISNEARSURFACE IS ALREADY DOING IT. SHIT
         if (isNearSurface && colliders[0]?.CompareTag("Ignore But Cannot Shoot") == true)
         {
+            soundPlayed = false;
             return;
         }
 
         if (isNearSurface && colliders[0]?.CompareTag("Ignore But Can Shoot") == true)
         {
+            soundPlayed = false;
             dragAndShoot.canShoot = true;
             onSpecificInteraction = true;
             return;
@@ -133,6 +135,12 @@ public class StickToSurface : MonoBehaviour
 
         if (isNearSurface && ableToStick)
         {
+            if (!soundPlayed)
+            {
+                whenSticked.Play();
+                soundPlayed = true;
+            }
+
             TurnPhysicsOFF(rigidbody);
             transform.parent.SetParent(colliders[0].gameObject.transform);
         }
@@ -146,12 +154,6 @@ public class StickToSurface : MonoBehaviour
         // }
 
         // i think those is near surfaces are not neccessary
-
-        if (rigidbody.velocity.y == 0 && rigidbody.velocity.x == 0 && !soundPlayed)
-        {
-            whenSticked.Play();
-            soundPlayed = true;
-        }
 
         // if (isNearSurface && ableToStick)
         // {

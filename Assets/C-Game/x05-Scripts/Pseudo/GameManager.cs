@@ -195,6 +195,8 @@ public class GameManager : MonoBehaviour
         int currentIndex = stages.IndexOf(currentLevel);
         HMsoundtracks[currentIndex].gameObject.SetActive(false);
 
+        safeSpot.position = player.transform.position;
+        
         if (currentIndex >= stages.Count - 1)
         {
             currentLevel = stages[0];
