@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 3874847441074809525}
   m_Layer: 9
   m_Name: Shooting Block Double Rotating
-  m_TagString: Untagged
+  m_TagString: No Spawn Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,4 +353,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 50
   rotationSpeedMax: 100
+  rotationDegreesLimit: 360
   directionLeft: 0

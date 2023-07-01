@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 7159696335120294284}
   m_Layer: 10
   m_Name: Unstable Platform Axis
-  m_TagString: Untagged
+  m_TagString: No Spawn Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

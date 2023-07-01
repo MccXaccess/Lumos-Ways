@@ -5400,7 +5400,7 @@ GameObject:
   - component: {fileID: 3956429931393055266}
   m_Layer: 9
   m_Name: Explosive Block
-  m_TagString: Untagged
+  m_TagString: No Spawn Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

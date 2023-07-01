@@ -8,6 +8,7 @@ TagManager:
   - NextStage
   - Ignore But Can Shoot
   - Ignore But Cannot Shoot
+  - No Spawn Zone
   layers:
   - Default
   - TransparentFX

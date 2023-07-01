@@ -1,255 +1,181 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-
 public class DragAndShoot : MonoBehaviour
 {
     [Header("Movement")]
     public float maxPower;
     float shootPower;
     public float gravity = 1;
-    [Range(0f, 0.1f)] public float slowMotion;
 
-    public bool shootWhileMoving = false;
+    [Space(10)]
     public bool forwardDraging = true;
     public bool showLineOnScreen = false;
+    public bool canShoot = false;
 
+    [Space(10)]
     public AudioSource whenJump;
 
-    Transform direction;
-    Rigidbody2D rb;
-    LineRenderer line;
-    LineRenderer screenLine;
+    [Space(10)]
+    public Transform directionTransform;
+    private Rigidbody2D rb2d;
+    
+    [Space(10)]
+    public LineRenderer dragPlayerLine;
+    public LineRenderer dragMouseLine;
 
-    // Vectors // 
     Vector2 startPosition;
     Vector2 targetPosition;
+    
     Vector2 startMousePos;
     Vector2 currentMousePos;
 
-    // direction of the mouse
-    Vector2 dire;
-    [HideInInspector] public bool canShoot = false;
+    Vector2 startMousePosScreenSpace;
 
-    float dist;
-
+    [Space(10)]
     public StickToSurface stickToSurface;
 
-    //public Trajectory trajectory;
-    void Start()
+    private void Start()
     {
         canShoot = false;
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = gravity;
-        line = GetComponent<LineRenderer>();
-        direction = transform.GetChild(0);
-        screenLine = direction.GetComponent<LineRenderer>();
+        rb2d = GetComponent<Rigidbody2D>();
+        rb2d.gravityScale = gravity;
     }
 
-    public void Push (Vector2 force)
-	{
-		rb.AddForce (force * 50, ForceMode2D.Impulse);
-	}
-
-    void Update()
+    private void Update()
     {
-
-        if ((Input.GetMouseButtonDown(0) && rb.velocity.y == 0) || stickToSurface.onSpecificInteraction)
+        if (Input.GetMouseButtonDown(0) && rb2d.velocity.y == 0 && canShoot)
         {
-            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DON'T WANT TO IGNORE UI
-            // trajectory.Show();
             MouseClick();
         }
 
-        if ((Input.GetMouseButton(0) && rb.velocity.y == 0) || stickToSurface.onSpecificInteraction)
+        if (Input.GetMouseButton(0) && rb2d.velocity.y == 0 && canShoot)
         {
-            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DON'T WANT TO IGNORE UI
             MouseDrag();
-
-            //trajectory.UpdateDots(transform.position, new Vector2(dire.x / 10 * shootPower, dire.y / 10 * shootPower));
-
-            if (shootWhileMoving) rb.velocity /= (1 + slowMotion);
-
         }
 
-        if ((Input.GetMouseButtonUp(0) && rb.velocity.y == 0) || stickToSurface.onSpecificInteraction)
+        if (Input.GetMouseButtonUp(0) && rb2d.velocity.y == 0 && canShoot)
         {
-            // if (EventSystem.current.currentSelectedGameObject) return;  //ENABLE THIS IF YOU DON'T WANT TO IGNORE UI
             MouseRelease();
-            //trajectory.Hide ();
         }
 
-        if (shootWhileMoving)
-            return;
-
-        if (rb.velocity.magnitude == 0)
+        if (rb2d.velocity.magnitude == 0)
         {
-            //rb.velocity = new Vector2(0, 0); //ENABLE THIS IF YOU WANT THE BALL TO STOP IF IT'S MOVING SO SLOW
             canShoot = true;
         }
     }
 
-
-    // MOUSE INPUTS
-    void MouseClick()
+    private void LateUpdate()
     {
-        if (shootWhileMoving)
+        if (showLineOnScreen)
+            DrawMouseLine();    
+    }
+
+    private void MouseClick()
+    {
+        startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        startMousePosScreenSpace = Input.mousePosition;
+
+        Vector2 direction = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+        transform.right = direction * 1;
+    }
+
+    private void MouseDrag()
+    {
+        LookAtShootDirection();
+        CalculateShootPower();
+        DrawPlayerLine();
+
+        startMousePos = Camera.main.ScreenToWorldPoint(startMousePosScreenSpace);
+        
+        currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        float distance = Vector2.Distance(currentMousePos, startMousePos);
+
+        if (distance > 1)
         {
-            Vector2 dir = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.right = dir * 1;
+            dragPlayerLine.enabled = true;
 
-            startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            return;
-        }
-
-        if (canShoot)
-        {
-            Vector2 dir = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.right = dir * 1;
-
-            startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (showLineOnScreen)
+                dragMouseLine.enabled = true;
         }
     }
 
-    void MouseDrag()
-    {
-        if (shootWhileMoving)
-        {
-            LookAtShootDirection();
-            DrawLine();
-
-            if (showLineOnScreen)
-                DrawScreenLine();
-
-            float distance = Vector2.Distance(currentMousePos, startMousePos);
-
-            if (distance > 1)
-            {
-                line.enabled = true;
-
-                if (showLineOnScreen)
-                    screenLine.enabled = true;
-            }
-
-            return;
-        }
-
-        if (canShoot)
-        {
-            LookAtShootDirection();
-            DrawLine();
-
-            if (showLineOnScreen)
-                DrawScreenLine();
-
-            float distance = Vector2.Distance(currentMousePos, startMousePos);
-
-            if (distance > 1)
-            {
-                line.enabled = true;
-
-                if (showLineOnScreen)
-                    screenLine.enabled = true;
-            }
-        }
-    }
-
-    void MouseRelease()
+    private void MouseRelease()
     {
         stickToSurface.TurnPhysicsON();
         StickToSurface.InitTakeoff();
-
-        if (shootWhileMoving ) // !EventSystem.current.IsPointerOverGameObject())
-        {
-            Shoot();
-            screenLine.enabled = false;
-            line.enabled = false;
-            return;
-        }
         
-        if (canShoot) // !EventSystem.current.IsPointerOverGameObject())
+        if (canShoot)
         {
             Shoot();
-            screenLine.enabled = false;
-            line.enabled = false;
+            dragMouseLine.enabled = false;
+            dragPlayerLine.enabled = false;
         }
     }
 
-
-    // ACTIONS  
-    void LookAtShootDirection()
+    private void LookAtShootDirection()
     {
-        Vector3 dir = startMousePos - currentMousePos;
+        Vector3 direction = startMousePos - currentMousePos;
 
-        if (forwardDraging)
-        {
-            transform.right = dir * -1;
-        }
-        else
-        {
-            transform.right = dir;
-        }
-
-
-        float dis = Vector2.Distance(startMousePos, currentMousePos);
-        dis *= 4;
-
-
-        if (dis < maxPower)
-        {
-            direction.localPosition = new Vector2(dis / 6, 0);
-            shootPower = dis;
-        }
-        else
-        {
-            shootPower = maxPower;
-            direction.localPosition = new Vector2(maxPower / 6, 0);
-        }
-
+        transform.right = forwardDraging ? transform.right = direction * -1 : transform.right = direction;
     }
-    public void Shoot()
+
+    private void CalculateShootPower()
+    {
+        float distance = Vector2.Distance(startMousePos, currentMousePos);
+        distance *= 4;
+
+        if (distance < maxPower)
+        {
+            directionTransform.localPosition = new Vector2(distance / 6, 0);
+            shootPower = distance;
+        }
+        else
+        {
+            directionTransform.localPosition = new Vector2(maxPower / 6, 0);
+            shootPower = maxPower;
+        }
+    }
+
+    private void Shoot()
     {
         canShoot = false;
         whenJump.Play();
         stickToSurface.WhenShooted();
-        // rb.AddForce(new Vector2(5f, 10f), ForceMode2D.Impulse);
-        rb.velocity = transform.right * shootPower;
+        rb2d.velocity = transform.right * shootPower;
     }
 
-
-    void DrawScreenLine()
+    private void DrawMouseLine()
     {
+        dragMouseLine.positionCount = 1;
+        dragMouseLine.SetPosition(0, startMousePos);
 
-        screenLine.positionCount = 1;
-        screenLine.SetPosition(0, startMousePos);
+        Vector2 direction = startMousePos - currentMousePos;
 
-        currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        dire = startMousePos - currentMousePos;
         // NOTE: DON'T FORGET TO CHANGE 5 VALUE TO SHOOT POWER VALUE?
-        dist = Mathf.Clamp(Vector2.Distance(startMousePos, currentMousePos), 0, 5);
-    
-        //currentMousePos = startMousePos + (currentMousePos.normalized * dist);
+        float distance = Mathf.Clamp(Vector2.Distance(startMousePos, currentMousePos), 0, 5);
         
-        Vector2 rotatedDire = new Vector2(-dire.x, -dire.y);
+        Vector2 rotatedDirection = new Vector2(-direction.x, -direction.y);
 
-        currentMousePos = startMousePos + (rotatedDire.normalized * dist);
+        currentMousePos = startMousePos + (rotatedDirection.normalized * distance);
 
-        screenLine.positionCount = 2;
-        screenLine.SetPosition(1, currentMousePos);
+        dragMouseLine.positionCount = 2;
+        dragMouseLine.SetPosition(1, currentMousePos);
     }
 
-    void DrawLine()
+    private void DrawPlayerLine()
     {
+        startPosition = transform.transform.position;
 
-        startPosition = transform.position;
+        dragPlayerLine.positionCount = 1;
+        dragPlayerLine.SetPosition(0, startPosition);
 
-        line.positionCount = 1;
-        line.SetPosition(0, startPosition);
+        targetPosition = directionTransform.position;
 
-        targetPosition = direction.position;
-
-        line.positionCount = 2;
-        line.SetPosition(1, targetPosition);
+        dragPlayerLine.positionCount = 2;
+        dragPlayerLine.SetPosition(1, targetPosition);
     }
 }

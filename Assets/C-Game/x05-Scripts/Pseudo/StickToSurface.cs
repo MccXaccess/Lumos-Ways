@@ -24,6 +24,8 @@ public class StickToSurface : MonoBehaviour
 
     public bool onSpecificInteraction;
 
+    public bool ableToPutRespawn;
+
     // temporary variables
     // ! this was set to true ( is near surface ) becuase the first hit was always late due to false at start (recommended to put almost everthing to true at init )
     // ! to avoid any unnecessary problems
@@ -118,6 +120,20 @@ public class StickToSurface : MonoBehaviour
             return;
         }
 
+        if (isNearSurface && ableToStick && colliders[0]?.CompareTag("No Spawn Zone") == true)
+        {
+            if (!soundPlayed)
+            {
+                whenSticked.Play();
+                soundPlayed = true;
+            }
+
+            TurnPhysicsOFF(rigidbody);
+
+            ableToPutRespawn = false;
+            return;
+        }
+
         // !YOU CAN SKIP DOING CHECK FOR NULL BECAUSE IT DOESNT MAKE SENSE BECUASE ISNEARSURFACE IS ALREADY DOING IT. SHIT
         if (isNearSurface && colliders[0]?.CompareTag("Ignore But Cannot Shoot") == true)
         {
@@ -141,6 +157,7 @@ public class StickToSurface : MonoBehaviour
                 soundPlayed = true;
             }
 
+            ableToPutRespawn = true;
             TurnPhysicsOFF(rigidbody);
             transform.parent.SetParent(colliders[0].gameObject.transform);
         }

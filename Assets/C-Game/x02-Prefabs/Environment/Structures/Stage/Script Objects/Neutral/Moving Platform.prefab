@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 4931902728129339132}
   m_Layer: 9
   m_Name: Moving Platform
-  m_TagString: Untagged
+  m_TagString: No Spawn Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

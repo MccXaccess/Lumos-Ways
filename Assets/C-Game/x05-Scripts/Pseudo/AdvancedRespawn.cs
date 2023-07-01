@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AdvancedRespawn : MonoBehaviour
 {
+    private StickToSurface stickToSurface;
+
     public Transform RespawnPoint;
 
     private Rigidbody2D rigidbody2D;
@@ -16,6 +18,7 @@ public class AdvancedRespawn : MonoBehaviour
 
     private void Start()
     {
+        stickToSurface = GetComponent<StickToSurface>();
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -23,7 +26,7 @@ public class AdvancedRespawn : MonoBehaviour
     {
         previousPos = transform.position;
 
-        if ( rigidbody2D.velocity.y == 0 && currentPos == previousPos )
+        if ( rigidbody2D.velocity.y == 0 && currentPos == previousPos && stickToSurface.ableToPutRespawn)
         {
             timeElapsed += Time.deltaTime;
 

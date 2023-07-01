@@ -10073,7 +10073,6 @@ GameObject:
   - component: {fileID: 4490108801583961753}
   - component: {fileID: 3069769644041133969}
   - component: {fileID: 1683322798264539453}
-  - component: {fileID: 2089265211357249074}
   - component: {fileID: 2880035537372723351}
   - component: {fileID: 5611147030122768843}
   - component: {fileID: 2308110520559171891}
@@ -10390,26 +10389,6 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 0
---- !u!114 &2089265211357249074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4879773635300750224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5ddb281792687438da3aad8d987636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPower: 20
-  gravity: 2
-  slowMotion: 0
-  shootWhileMoving: 0
-  forwardDraging: 0
-  showLineOnScreen: 1
-  whenJump: {fileID: 3516515756110944268}
-  stickToSurface: {fileID: 0}
 --- !u!114 &2880035537372723351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10430,6 +10409,7 @@ MonoBehaviour:
   lastTimeFixed: 0.1
   initWin: 0
   whenSticked: {fileID: 4384549208521869456}
+  onSpecificInteraction: 0
   isSqueezed: 0
   raycastDistance: 0.8
   TimeJumpAmount: 0

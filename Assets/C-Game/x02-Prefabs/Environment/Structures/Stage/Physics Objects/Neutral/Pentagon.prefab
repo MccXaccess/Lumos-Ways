@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3935667232544884969}
   m_Layer: 9
   m_Name: Pentagon
-  m_TagString: Untagged
+  m_TagString: No Spawn Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

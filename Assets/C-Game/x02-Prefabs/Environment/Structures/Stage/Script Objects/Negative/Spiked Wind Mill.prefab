@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 2364919337128728021}
   m_Layer: 9
   m_Name: Spiked Wind Mill
-  m_TagString: Untagged
+  m_TagString: No Spawn Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 112
   rotationSpeedMax: 100
+  rotationDegreesLimit: 360
   directionLeft: 0
 --- !u!1 &5168531370603596232
 GameObject:

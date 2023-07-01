@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 5891935000280761280}
   m_Layer: 9
   m_Name: Rotating Gear
-  m_TagString: Untagged
+  m_TagString: No Spawn Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -923,6 +923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 35
   rotationSpeedMax: 100
+  rotationDegreesLimit: 360
   directionLeft: 0
 --- !u!1 &7064886918634983332
 GameObject:
