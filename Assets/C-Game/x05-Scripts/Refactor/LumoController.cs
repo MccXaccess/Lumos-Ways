@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LumoController : ControlledCircleCollider
+public class LumoController : MonoBehaviour
 {
     [Header("Lumo Controller Values:")]
     [SerializeField] private float m_MaximumShootPower = 20.0F;

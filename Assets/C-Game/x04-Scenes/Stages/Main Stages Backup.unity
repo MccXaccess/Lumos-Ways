@@ -8039,7 +8039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &104746128
 Transform:
   m_ObjectHideFlags: 0
@@ -59346,7 +59346,7 @@ Transform:
   m_GameObject: {fileID: 5578893524404975867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7509974932778339729}
@@ -60224,7 +60224,6 @@ GameObject:
   - component: {fileID: 7747807201750216254}
   - component: {fileID: 7747807201750216255}
   - component: {fileID: 7747807201750216256}
-  - component: {fileID: 7747807201750216257}
   m_Layer: 10
   m_Name: Lumo Controller
   m_TagString: Player
@@ -60348,8 +60347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa63535a68798c9b58ab70ec748d8857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CircleRadius: 5
-  m_Density: 1
   m_MaximumShootPower: 20
   m_GravityModifier: 2
   m_ForwardDragging: 0
@@ -60370,23 +60367,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e6c1fd3621138eab8d1f9025879ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CircleRadius: 0.45
-  m_Density: 1
---- !u!114 &7747807201750216257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7341713619217200229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ee5309f4973ee18a4c5688a9dd32c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_NextStageTag: 
   m_DeathTag: 
   m_IgnoreSurfaceTag: 
+  m_CircleRadius: 0.5
+  m_Density: 1
+  m_TimeJumpAmount: 0.5
 --- !u!1001 &7876290363641089361
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,34 +1,28 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class ControlledCircleCollider : MonoBehaviour
 {
+    [SerializeField] private string m_NextStageTag;
+    [SerializeField] private string m_DeathTag;
+    [SerializeField] private string m_IgnoreSurfaceTag;
+
     [SerializeField] protected float m_CircleRadius = 0.45F;
     [SerializeField] protected float m_Density = 1.0F;
 
-    protected List<Collider2D> m_Colliders = new List<Collider2D>();
-
     private CircleCollider2D m_CircleCollider2D;
+    private LumoController m_LumoController;
 
-    public delegate void OnCollisionEnter(Collision2D a_collision2D);
-    public event OnCollisionEnter OnCollisionEnterEvent;
+    private bool m_CooldownPassed = true;
 
-    public delegate void OnCollisionExit(Collision2D a_collision2D);
-    public event OnCollisionExit OnCollisionExitEvent;
-    
-    private void OnEnable()
-    {
-        
-    }
-
-    private void OnDisable() 
-    {
-
-    }
+    public float m_TimeJumpAmount;
 
     private void Awake()
     {
         m_CircleCollider2D = GetComponent<CircleCollider2D>();
+        m_LumoController = GetComponent<LumoController>();
+        m_LumoController.OnJump += OnJumpHandler;
     }
 
     private void Start()
@@ -37,23 +31,34 @@ public class ControlledCircleCollider : MonoBehaviour
         m_CircleCollider2D.density = m_CircleRadius;
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D a_collisionInfo)
     {
-        OnCollisionEnterEvent?.Invoke(a_collisionInfo);
+        if (m_CooldownPassed)
+        {
+            m_CooldownPassed = false;
+            FreezePlayer(true);
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D a_collisionInfo) 
+    public void OnJumpAction()
     {
-        OnCollisionExitEvent?.Invoke(a_collisionInfo);
+        FreezePlayer(false);
+        StartCoroutine(Cooldown());
+    }
+
+    public void FreezePlayer(bool a_State)
+    {
+        m_LumoController.m_RB2D.bodyType = a_State ? RigidbodyType2D.Static : RigidbodyType2D.Dynamic;
+    }
+
+    private IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(m_TimeJumpAmount);
+        m_CooldownPassed = true;
+    }
+
+    private void OnJumpHandler()
+    {
+        OnJumpAction();
     }
 }

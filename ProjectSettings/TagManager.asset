@@ -5,10 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death
-  - NextStage
-  - Ignore But Can Shoot
-  - Ignore But Cannot Shoot
   - No Spawn Zone
+  - Ignore Collision
+  - Next Stage
   layers:
   - Default
   - TransparentFX
