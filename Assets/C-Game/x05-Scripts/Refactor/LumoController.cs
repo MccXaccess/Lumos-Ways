@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LumoController : MonoBehaviour
+public class LumoController : ControlledCircleCollider
 {
     [Header("Lumo Controller Values:")]
     [SerializeField] private float m_MaximumShootPower = 20.0F;
@@ -28,19 +28,19 @@ public class LumoController : MonoBehaviour
 
     private float m_CurrentShootPower = 0.0F;
 
-    private Rigidbody2D m_RB2D;
+    [HideInInspector] public Rigidbody2D m_RB2D;
 
     public delegate void OnJumpEvent();
     public event OnJumpEvent OnJump;
 
     private void Awake()
     {
-        
+        m_RB2D = GetComponent<Rigidbody2D>();   
     }
 
     private void Start()
     {
-        m_RB2D = GetComponent<Rigidbody2D>();
+        m_RB2D.gravityScale = m_GravityModifier;
     }
 
     private void FixedUpdate()

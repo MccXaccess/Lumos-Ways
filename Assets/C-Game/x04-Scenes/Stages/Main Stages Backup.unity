@@ -9976,7 +9976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212125336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -11.58, y: 1.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17424,7 +17424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -11.58, y: 1.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20366,7 +20366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422430476290928654, guid: 1757886e72a5a4a9f80a95ef57313df0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.624994
+      value: -16.36199
       objectReference: {fileID: 0}
     - target: {fileID: 4422430476290928654, guid: 1757886e72a5a4a9f80a95ef57313df0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37042,7 +37042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1533843736
 Transform:
   m_ObjectHideFlags: 0
@@ -38798,7 +38798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 856426972787002907, guid: 7103720a98b07ab52b7e0af161683e1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.750005
+      value: -10.908006
       objectReference: {fileID: 0}
     - target: {fileID: 856426972787002907, guid: 7103720a98b07ab52b7e0af161683e1b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39075,7 +39075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4712293061432753525, guid: fa099c1438dac325b8b56c86fdc76f22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.50001
+      value: 21.816011
       objectReference: {fileID: 0}
     - target: {fileID: 4712293061432753525, guid: fa099c1438dac325b8b56c86fdc76f22, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41100,7 +41100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090993066193729612, guid: 4a4295b39875c6856a926fc1d6472320, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.374992
+      value: -27.269993
       objectReference: {fileID: 0}
     - target: {fileID: 9090993066193729612, guid: 4a4295b39875c6856a926fc1d6472320, type: 3}
       propertyPath: m_LocalPosition.y
@@ -60166,7 +60166,7 @@ Rigidbody2D:
   m_Mass: 0.6361725
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 58893e85e1615f73c978dee99af65240, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -60223,6 +60223,8 @@ GameObject:
   - component: {fileID: 3532841693833567944}
   - component: {fileID: 7747807201750216254}
   - component: {fileID: 7747807201750216255}
+  - component: {fileID: 7747807201750216256}
+  - component: {fileID: 7747807201750216257}
   m_Layer: 10
   m_Name: Lumo Controller
   m_TagString: Player
@@ -60256,7 +60258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7341713619217200229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -11.58, y: 1.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60346,13 +60348,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa63535a68798c9b58ab70ec748d8857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CircleRadius: 5
+  m_Density: 1
   m_MaximumShootPower: 20
-  m_GravityModifier: 1
+  m_GravityModifier: 2
   m_ForwardDragging: 0
   m_ShowLineOnScreen: 1
   m_DragPlayerLine: {fileID: 1114502735}
   m_DragMouseLine: {fileID: 1850957312276413984}
   m_Direction: {fileID: 4908377970462158039}
+  m_RB2D: {fileID: 0}
+--- !u!114 &7747807201750216256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341713619217200229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e6c1fd3621138eab8d1f9025879ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CircleRadius: 0.45
+  m_Density: 1
+--- !u!114 &7747807201750216257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341713619217200229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ee5309f4973ee18a4c5688a9dd32c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NextStageTag: 
+  m_DeathTag: 
+  m_IgnoreSurfaceTag: 
 --- !u!1001 &7876290363641089361
 PrefabInstance:
   m_ObjectHideFlags: 0
