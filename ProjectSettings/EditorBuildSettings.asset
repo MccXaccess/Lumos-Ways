@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/C-Game/x04-Scenes/Main Menu.unity
     guid: c77f297b0bfebd5638ebbeecc5a2246b
   - enabled: 1
-    path: Assets/C-Game/x04-Scenes/Stages/Main Stages.unity
-    guid: be5f3a334c63be8c892bfc259910925d
+    path: Assets/C-Game/x04-Scenes/Stages/Stage Template.unity
+    guid: 04659e2cde7b1368fbd45cd14aecbe26
   m_configObjects: {}

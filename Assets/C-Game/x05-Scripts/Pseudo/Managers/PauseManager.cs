@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
-    public GameObject[] parent;
+    public GameObject[] m_AffectedObjects;
+    public GameObject[] m_AffectedObjectsReversed;
+    private bool m_CurrentState;
+    public AudioSource m_AudioPlayer;
 
-    public void SetActive(bool state)
+    public void PauseToggle()
     {
-        foreach (GameObject i in parent)
+        m_CurrentState = !m_CurrentState;
+
+        if (m_CurrentState)
         {
-            i.SetActive(state);
+            GameManager.Instance.m_Interactable = false;
+            m_AudioPlayer.volume = 0.5F;
+        }
+        else 
+        {
+            GameManager.Instance.m_Interactable = true;
+            m_AudioPlayer.volume = 1;
         }
 
-        Time.timeScale = state ? 0 : 1;
+        foreach (GameObject obj in m_AffectedObjects)
+        {
+            obj.SetActive(m_CurrentState);
+        }
+
+        foreach (GameObject obj in m_AffectedObjectsReversed)
+        {
+            obj.SetActive(!m_CurrentState);
+        }
+
+        Time.timeScale = m_CurrentState ? 0 : 1;
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            PauseToggle();
+        }
     }
 }

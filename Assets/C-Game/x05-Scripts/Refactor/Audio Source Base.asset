@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39affd2dc8801bd8ea27672b4f0e4156, type: 3}
+  m_Name: Audio Source Base
+  m_EditorClassIdentifier: 
+  m_DeathSound: {fileID: 8300000, guid: 7eaefaeb92062f4fcb15accf7d13b01c, type: 3}
+  m_StickedSound: {fileID: 8300000, guid: 2949693b541b4b82c9d4891e42ae22b6, type: 3}
+  m_JumpedSound: {fileID: 8300000, guid: 4a9aff6195c45da458ad956b50d04f6c, type: 3}
+  m_BouncedSound: {fileID: 0}
+  m_PreExplosionSound: {fileID: 0}
+  m_ExplosionSound: {fileID: 8300000, guid: 3c3023004c8d6a76db22f49ca4732515, type: 3}
+  m_ShootingBlockSound: {fileID: 0}
+  m_SoundTrack_MainMenu: {fileID: 8300000, guid: b6a8f815fac169652836bdde4a9ad39b, type: 3}
+  m_StageSoundTracks:
+  - {fileID: 8300000, guid: a30bcc49865b95272990ea44aa8fa801, type: 3}
+  - {fileID: 8300000, guid: 04ae1f7398433796793eb0a7cb885be8, type: 3}
+  - {fileID: 8300000, guid: 3c10f7a7acb06eaf08538add6270cbaf, type: 3}

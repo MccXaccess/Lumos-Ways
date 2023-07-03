@@ -25,6 +25,7 @@ public class LumoController : MonoBehaviour
     private Vector2 m_CurrentMousePosition;
 
     private bool m_CanShoot = false;
+    private bool m_IsDragging = false;
 
     private float m_CurrentShootPower = 0.0F;
 
@@ -56,6 +57,12 @@ public class LumoController : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.Instance.m_Interactable)
+        {
+            m_IsDragging = false;
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0) && m_RB2D.velocity.y == 0 && m_CanShoot)
         {
             MouseClick();
@@ -75,10 +82,18 @@ public class LumoController : MonoBehaviour
         {
             m_CanShoot = true;
         }
+
+        if (!m_IsDragging)
+        {
+            m_DragMouseLine.enabled = false;
+            m_DragPlayerLine.enabled = false;
+        }
     }
 
     private void MouseClick()
     {
+        m_IsDragging = true;
+
         m_StartMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         m_StartMousePositionScreen = Input.mousePosition;
@@ -111,9 +126,8 @@ public class LumoController : MonoBehaviour
 
     private void MouseRelease()
     {
-        //stickToSurface.TurnPhysicsON();
-        //StickToSurface.InitTakeoff();
-        
+        m_IsDragging = false;
+
         if (OnJump != null)
         {
             OnJump();

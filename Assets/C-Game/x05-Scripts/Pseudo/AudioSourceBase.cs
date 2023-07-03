@@ -1,6 +1,8 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "Generation", menuName = "Base Character Controller/Create New Configuration", order = 0)]
+[CreateAssetMenu(fileName = "Audio Source Base", menuName = "Game Variables/Create New Audio Source Base", order = 0)]
 public class AudioSourceBase : ScriptableObject
 {
     [Header("Sound Effects:")]
@@ -22,16 +24,10 @@ public class AudioSourceBase : ScriptableObject
     [Space(15)]
 
     [SerializeField] private AudioClip m_SoundTrack_MainMenu;
-    [SerializeField] private AudioClip m_SoundTrack_Stage1;
-    [SerializeField] private AudioClip m_SoundTrack_Stage2;
-    [SerializeField] private AudioClip m_SoundTrack_Stage3;
-    [SerializeField] private AudioClip m_SoundTrack_Stage4;
-    [SerializeField] private AudioClip m_SoundTrack_Stage5;
-    [SerializeField] private AudioClip m_SoundTrack_Stage6;
-    [SerializeField] private AudioClip m_SoundTrack_Stage7;
-    [SerializeField] private AudioClip m_SoundTrack_Stage8;
-    [SerializeField] private AudioClip m_SoundTrack_Stage9;
-    [SerializeField] private AudioClip m_SoundTrack_Stage10;
+
+    public List<AudioClip> m_StageSoundTracks = new List<AudioClip>();
+
+    private int m_MusicIndex;
 
     #region Encapsulation - Sound Effects
     public AudioClip DeathSound { get => m_DeathSound; set => m_DeathSound = value; }
@@ -46,15 +42,84 @@ public class AudioSourceBase : ScriptableObject
 
     #region Encapsulation - Sound Tracks
     public AudioClip MainMenu { get => m_SoundTrack_MainMenu; set => m_SoundTrack_MainMenu = value; }
-    public AudioClip Stage1 { get => m_SoundTrack_Stage1; set => m_SoundTrack_Stage1 = value; }
-    public AudioClip Stage2 { get => m_SoundTrack_Stage2; set => m_SoundTrack_Stage2 = value; }
-    public AudioClip Stage3 { get => m_SoundTrack_Stage3; set => m_SoundTrack_Stage3 = value; }
-    public AudioClip Stage4 { get => m_SoundTrack_Stage4; set => m_SoundTrack_Stage4 = value; }
-    public AudioClip Stage5 { get => m_SoundTrack_Stage5; set => m_SoundTrack_Stage5 = value; }
-    public AudioClip Stage6 { get => m_SoundTrack_Stage6; set => m_SoundTrack_Stage6 = value; }
-    public AudioClip Stage7 { get => m_SoundTrack_Stage7; set => m_SoundTrack_Stage7 = value; }
-    public AudioClip Stage8 { get => m_SoundTrack_Stage8; set => m_SoundTrack_Stage8 = value; }
-    public AudioClip Stage9 { get => m_SoundTrack_Stage9; set => m_SoundTrack_Stage9 = value; }
-    public AudioClip Stage10 { get => m_SoundTrack_Stage10; set => m_SoundTrack_Stage10 = value; }
     #endregion
+
+    public void PlaySound(AudioSource a_AudioSource, string a_SoundName)
+    {
+        AudioClip audioClip = null;
+
+        audioClip = GetClip(a_SoundName);
+
+        if (audioClip != null)
+        {
+            StopSound(a_AudioSource);
+            a_AudioSource.clip = audioClip;
+            a_AudioSource.Play();
+        }
+    }
+
+    public void StopSound(AudioSource a_AudioSource)
+    {
+        a_AudioSource.Stop();
+    }
+
+    public AudioClip GetClip(string a_SoundName)
+    {
+        AudioClip audioClip = null;
+
+        switch (a_SoundName)
+        {
+            // Sound Effects
+            case "DeathSound":
+                audioClip = m_DeathSound;
+                break;
+            case "StickedSound":
+                audioClip = m_StickedSound;
+                break;
+            case "JumpedSound":
+                audioClip = m_JumpedSound;
+                break;
+            case "BouncedSound":
+                audioClip = m_BouncedSound;
+                break;
+            case "PreExplosionSound":
+                audioClip = m_PreExplosionSound;
+                break;
+            case "ExplosionSound":
+                audioClip = m_ExplosionSound;
+                break;
+            case "ShootingBlockSound":
+                audioClip = m_ShootingBlockSound;
+                break;
+
+            // Sound Tracks
+            case "MainMenu":
+                audioClip = m_SoundTrack_MainMenu;
+                break;
+
+            default:
+                Debug.LogWarning("Sound name not found: " + a_SoundName);
+                break;
+        }
+
+        return audioClip;
+    }
+
+    public void InitiateActions()
+    {
+        m_MusicIndex = 0;
+    }
+    public void NextStageMusic(AudioSource a_AudioSource)
+    {
+        if (m_MusicIndex >= m_StageSoundTracks.Count)
+        {
+            m_MusicIndex = 0;
+        }
+
+        StopSound(a_AudioSource);
+        a_AudioSource.clip = m_StageSoundTracks[m_MusicIndex];
+        a_AudioSource.Play();
+        
+        m_MusicIndex++;
+    }
 }

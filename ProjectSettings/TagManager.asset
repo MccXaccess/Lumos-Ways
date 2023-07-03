@@ -8,6 +8,7 @@ TagManager:
   - No Spawn Zone
   - Ignore Collision
   - Next Stage
+  - Do Not Parent
   layers:
   - Default
   - TransparentFX

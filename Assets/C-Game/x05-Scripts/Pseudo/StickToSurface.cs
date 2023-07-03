@@ -104,11 +104,11 @@ public class StickToSurface : MonoBehaviour
 
         if (isNearSurface && colliders[0]?.CompareTag("Death") == true)
         {
-            if (GameManager.Instance.IsAlive)
-            {
-                GameManager.Instance.Dead();
-                return;
-            }
+            // if (GameManager.Instance.IsAlive)
+            // {
+            //     GameManager.Instance.Dead();
+            //     return;
+            // }
         }
 
         if (isNearSurface && colliders[0]?.CompareTag("NextStage") == true && !initWin)

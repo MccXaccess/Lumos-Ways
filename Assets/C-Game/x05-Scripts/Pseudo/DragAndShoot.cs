@@ -62,6 +62,9 @@ public class DragAndShoot : MonoBehaviour
         {
             canShoot = true;
         }
+
+        dragMouseLine.enabled = false;
+        dragPlayerLine.enabled = false;
     }
 
     private void LateUpdate()
