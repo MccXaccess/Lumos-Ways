@@ -114,8 +114,7 @@ public class GameManager : MonoBehaviour
     {
         if (GameSceneManager.Instance != null)
         {
-            demoLoadScene?.StartTransition();
-            GameSceneManager.Instance.NextSceneRelative();
+            demoLoadScene?.LoadScene(GameSceneManager.Instance.GetRelativeSceneIndex());
         }
     }
 

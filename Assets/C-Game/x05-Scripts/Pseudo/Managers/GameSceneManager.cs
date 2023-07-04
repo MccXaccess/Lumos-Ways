@@ -53,4 +53,9 @@ public class GameSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public int GetRelativeSceneIndex()
+    {
+        return SceneManager.GetActiveScene().buildIndex + 1;
+    }
 }

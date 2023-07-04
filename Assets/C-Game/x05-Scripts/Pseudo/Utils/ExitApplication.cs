@@ -7,8 +7,7 @@ public class ExitApplication : MonoBehaviour
     private IEnumerator StartTimer(float value)
     {    
         yield return new WaitForSeconds(value);
-        //Application.Quit();
-        Debug.Log("exit");
+        Application.Quit();
     }
     public void ExitApp(float timeUntilExit)
     {

@@ -12,6 +12,11 @@ namespace EasyTransition
         public void LoadScene(string _sceneName)
         {
             TransitionManager.Instance().Transition(_sceneName, transition, startDelay);
+        }
+
+        public void LoadScene(int _sceneName)
+        {
+            TransitionManager.Instance().Transition(_sceneName, transition, startDelay);
         }   
 
         public void StartTransition()

@@ -20183,6 +20183,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 233215632268591764, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 233215632268591764, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 233215632268591764, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
+      propertyPath: m_MotionVectors
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891772139431166777, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
+      propertyPath: m_CooldownDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5065095225570778882, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_Name
       value: Lumo Controller
@@ -20193,11 +20209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7017626648100505514, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 27.7
       objectReference: {fileID: 0}
     - target: {fileID: 7017626648100505514, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 7017626648100505514, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20318,11 +20334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8904392749242892114, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 27.7
       objectReference: {fileID: 0}
     - target: {fileID: 8904392749242892114, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 8904392749242892114, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20621,11 +20637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 27.7
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.z

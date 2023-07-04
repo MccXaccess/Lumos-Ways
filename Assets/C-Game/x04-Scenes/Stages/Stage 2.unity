@@ -2769,6 +2769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage 2 - Attempts To Confess
       objectReference: {fileID: 0}
+    - target: {fileID: 3819302993483700190, guid: eecfc10d6cb1909c4a27bcf50ba60a70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 3854449769842796205, guid: eecfc10d6cb1909c4a27bcf50ba60a70, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -19848,7 +19852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6912172506921822930, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20183,6 +20187,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 233215632268591764, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5065095225570778882, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_Name
       value: Lumo Controller

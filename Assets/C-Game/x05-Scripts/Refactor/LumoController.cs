@@ -36,7 +36,7 @@ public class LumoController : MonoBehaviour
 
     private void Awake()
     {
-        m_RB2D = GetComponent<Rigidbody2D>();   
+        m_RB2D = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -181,7 +181,7 @@ public class LumoController : MonoBehaviour
         Vector2 direction = m_StartMousePosition - m_CurrentMousePosition;
 
         // NOTE: DON'T FORGET TO CHANGE 5 VALUE TO SHOOT POWER VALUE?
-        float distance = Mathf.Clamp(Vector2.Distance(m_StartMousePosition, m_CurrentMousePosition), 0, 5);
+        float distance = Mathf.Clamp(Vector2.Distance(m_StartMousePosition, m_CurrentMousePosition), 0, 10);
         
         Vector2 rotatedDirection = new Vector2(-direction.x, -direction.y);
 

@@ -63,18 +63,19 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
 
         if (hit1.collider != null && hit2.collider != null)
         {
-            ParentPlayer(null);
-            FreezePlayer(false);
-
-            if (m_ExplosionParticle != null)
-                Instantiate(m_ExplosionParticle, transform.position, Quaternion.identity);
-
-            GameManager.Instance.Dead();
+            WhenDead();
             return;
         }
 
-        if (m_CooldownPassed && m_CollisionDetected)
+        if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_IgnoreCollisionTag))
         {
+            m_CollisionObject = null;
+            return;
+        }
+
+        if (m_CollisionDetected && m_CooldownPassed)
+        {
+            //m_AudioSourceBase.PlaySound(m_AudioSource, "StickedSound");
             FreezePlayer(true);
             ParentPlayer(colliders[0].gameObject.transform);
             return;
@@ -88,13 +89,7 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
     {
         if (a_collisionInfo.gameObject.CompareTag(m_DeathTag))
         {
-            ParentPlayer(null);
-            FreezePlayer(false);
-
-            if (m_ExplosionParticle != null)
-                Instantiate(m_ExplosionParticle, transform.position, Quaternion.identity);
-
-            GameManager.Instance.Dead();
+            WhenDead();
             return;
         }
 
@@ -108,12 +103,6 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
         if (a_collisionInfo.gameObject.CompareTag(m_DoNotParentTag))
         {
             FreezePlayer(true);
-            m_CollisionObject = null;
-            return;
-        }
-
-        if (a_collisionInfo.gameObject.CompareTag(m_IgnoreCollisionTag))
-        {
             m_CollisionObject = null;
             return;
         }
@@ -142,8 +131,20 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
         m_CooldownPassed = true;
     }
 
+    private void WhenDead()
+    {
+        //m_AudioSourceBase.PlaySound(m_AudioSource, "DeathSound");
+        ParentPlayer(null);
+        FreezePlayer(false);
+
+        if (m_ExplosionParticle != null)
+            Instantiate(m_ExplosionParticle, transform.position, Quaternion.identity);
+
+        GameManager.Instance.Dead();
+    }
     public void OnJumpAction()
     {
+        //m_AudioSourceBase.PlaySound(m_AudioSource, "JumpedSound");
         m_CooldownPassed = false;
         FreezePlayer(false);
         ParentPlayer(null);
