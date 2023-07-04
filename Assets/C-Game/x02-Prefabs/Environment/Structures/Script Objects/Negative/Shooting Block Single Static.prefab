@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7945580719524910233}
   m_Layer: 9
   m_Name: Shooting Block Single Static
-  m_TagString: No Spawn Zone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death
-  - No Spawn Zone
   - Ignore Collision
   - Next Stage
   - Do Not Parent

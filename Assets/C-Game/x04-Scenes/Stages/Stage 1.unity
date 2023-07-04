@@ -2123,6 +2123,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117446233}
     m_Modifications:
+    - target: {fileID: 1339117169692568878, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: parallaxCamera
+      value: 
+      objectReference: {fileID: 519420035}
     - target: {fileID: 2418373281606787697, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2167,10 +2171,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5512825666031028381, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: parallaxCamera
+      value: 
+      objectReference: {fileID: 519420035}
+    - target: {fileID: 6274632969241891090, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: parallaxCamera
+      value: 
+      objectReference: {fileID: 519420035}
     - target: {fileID: 7062903912898914847, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: m_Name
       value: Stage 1 - Just Friends
       objectReference: {fileID: 0}
+    - target: {fileID: 7172940404474699611, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: parallaxCamera
+      value: 
+      objectReference: {fileID: 519420035}
+    - target: {fileID: 8372999366333537800, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: parallaxCamera
+      value: 
+      objectReference: {fileID: 519420035}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19907,6 +19927,10 @@ PrefabInstance:
       propertyPath: m_DeadUI
       value: 
       objectReference: {fileID: 1577071900}
+    - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
+      propertyPath: m_StageName
+      value: Stage 1 - Just Friends
+      objectReference: {fileID: 0}
     - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
       propertyPath: m_StartPoint
       value: 

@@ -18,10 +18,13 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
     
     private LumoController m_LumoController;
 
+    [Space(10)]
+    [SerializeField] private GameObject m_ExplosionParticle;
+
     private Transform m_CollisionObject;
 
-    private bool m_CooldownPassed = true;
-    private bool m_CollisionDetected;
+    [SerializeField] private bool m_CooldownPassed = true;
+    [SerializeField] private bool m_CollisionDetected;
 
     public float m_CooldownDuration;
 
@@ -45,8 +48,8 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
 
     private void Start()
     {
-        m_CircleCollider2D.radius = m_CircleRadius;
-        m_CircleCollider2D.density = m_CircleRadius;
+        //m_CircleCollider2D.radius = m_CircleRadius;
+        //m_CircleCollider2D.density = m_CircleRadius;
     }
 
     private void Update() 
@@ -54,28 +57,44 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
         RaycastHit2D hit1 = Physics2D.Raycast(transform.position, Vector2.down, m_CircleRadius, m_LayerMask);
         RaycastHit2D hit2 = Physics2D.Raycast(transform.position, Vector2.up, m_CircleRadius, m_LayerMask);
 
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, m_CircleRadius, m_LayerMask);
+
+        m_CollisionDetected = colliders.Length > 0;
+
         if (hit1.collider != null && hit2.collider != null)
         {
+            ParentPlayer(null);
+            FreezePlayer(false);
+
+            if (m_ExplosionParticle != null)
+                Instantiate(m_ExplosionParticle, transform.position, Quaternion.identity);
+
             GameManager.Instance.Dead();
-            m_CollisionObject = null;
             return;
         }
 
         if (m_CooldownPassed && m_CollisionDetected)
         {
-            m_CooldownPassed = false;
             FreezePlayer(true);
-            ParentPlayer(m_CollisionObject);
+            ParentPlayer(colliders[0].gameObject.transform);
             return;
         }
+
+        FreezePlayer(false);
+        ParentPlayer(null);
     }
 
     private void OnCollisionEnter2D(Collision2D a_collisionInfo)
     {
         if (a_collisionInfo.gameObject.CompareTag(m_DeathTag))
         {
+            ParentPlayer(null);
+            FreezePlayer(false);
+
+            if (m_ExplosionParticle != null)
+                Instantiate(m_ExplosionParticle, transform.position, Quaternion.identity);
+
             GameManager.Instance.Dead();
-            m_CollisionObject = null;
             return;
         }
 
@@ -100,12 +119,11 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
         }
 
         m_CollisionObject = a_collisionInfo.gameObject.transform;
-        m_CollisionDetected = true;
     }
 
     private void OnCollisionExit2D(Collision2D a_collisionInfo) 
     {
-        m_CollisionDetected = false;
+
     }
 
     public void Unparent()
@@ -126,9 +144,10 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
 
     public void OnJumpAction()
     {
-        StartCoroutine(Cooldown());
+        m_CooldownPassed = false;
         FreezePlayer(false);
         ParentPlayer(null);
+        StartCoroutine(Cooldown());
     }
 
     public void FreezePlayer(bool a_State)
