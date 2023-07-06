@@ -67,6 +67,26 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
             return;
         }
 
+        if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_DeathTag))
+        {
+            WhenDead();
+            return;
+        }
+
+        if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_NextStageTag))
+        {
+            GameManager.Instance.InitWin();
+            m_CollisionObject = null;
+            return;
+        }
+
+        if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_DoNotParentTag))
+        {
+            FreezePlayer(true);
+            m_CollisionObject = null;
+            return;
+        }
+
         if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_IgnoreCollisionTag))
         {
             m_CollisionObject = null;
@@ -83,36 +103,6 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
 
         FreezePlayer(false);
         ParentPlayer(null);
-    }
-
-    private void OnCollisionEnter2D(Collision2D a_collisionInfo)
-    {
-        if (a_collisionInfo.gameObject.CompareTag(m_DeathTag))
-        {
-            WhenDead();
-            return;
-        }
-
-        if (a_collisionInfo.gameObject.CompareTag(m_NextStageTag))
-        {
-            GameManager.Instance.InitWin();
-            m_CollisionObject = null;
-            return;
-        }
-
-        if (a_collisionInfo.gameObject.CompareTag(m_DoNotParentTag))
-        {
-            FreezePlayer(true);
-            m_CollisionObject = null;
-            return;
-        }
-
-        m_CollisionObject = a_collisionInfo.gameObject.transform;
-    }
-
-    private void OnCollisionExit2D(Collision2D a_collisionInfo) 
-    {
-
     }
 
     public void Unparent()

@@ -151,7 +151,7 @@ public class LumoController : MonoBehaviour
     private void CalculateShootPower()
     {
         float distance = Vector2.Distance(m_StartMousePosition, m_CurrentMousePosition);
-        distance *= 4;
+        distance *= 2.5F;
 
         if (distance < m_MaximumShootPower)
         {

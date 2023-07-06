@@ -2123,10 +2123,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117446233}
     m_Modifications:
+    - target: {fileID: 744762835184721464, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 82.06545
+      objectReference: {fileID: 0}
+    - target: {fileID: 761519977930026893, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59.21283
+      objectReference: {fileID: 0}
+    - target: {fileID: 892732686350629588, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 154.3129
+      objectReference: {fileID: 0}
     - target: {fileID: 1339117169692568878, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: parallaxCamera
       value: 
       objectReference: {fileID: 519420035}
+    - target: {fileID: 2230592387064497427, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.44358
+      objectReference: {fileID: 0}
     - target: {fileID: 2418373281606787697, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2171,14 +2187,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4111104531065744513, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.061792
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119178422156352489, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 127.64371
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380524665029878651, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.334631
+      objectReference: {fileID: 0}
     - target: {fileID: 5512825666031028381, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: parallaxCamera
       value: 
       objectReference: {fileID: 519420035}
+    - target: {fileID: 5635055386965703310, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.556421
+      objectReference: {fileID: 0}
     - target: {fileID: 6274632969241891090, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: parallaxCamera
       value: 
       objectReference: {fileID: 519420035}
+    - target: {fileID: 6441840024277610416, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 48.11285
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852481806225901962, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 75.54354
+      objectReference: {fileID: 0}
     - target: {fileID: 7062903912898914847, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: m_Name
       value: Stage 1 - Just Friends
@@ -2187,6 +2227,18 @@ PrefabInstance:
       propertyPath: parallaxCamera
       value: 
       objectReference: {fileID: 519420035}
+    - target: {fileID: 7572700049789636965, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 143.44368
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043108542108985195, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 118.96548
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044254708357362665, guid: 85e4041e1618227839878151964901b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.3346243
+      objectReference: {fileID: 0}
     - target: {fileID: 8372999366333537800, guid: 85e4041e1618227839878151964901b0, type: 3}
       propertyPath: parallaxCamera
       value: 
@@ -2196,17 +2248,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e4041e1618227839878151964901b0, type: 3}
---- !u!114 &212125337 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 43472913410815303, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
-  m_PrefabInstance: {fileID: 6613299096627443437}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &212125338 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8904392749242892114, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
@@ -20320,10 +20361,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 999631852}
     m_Modifications:
+    - target: {fileID: 20007622816985223, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
+      propertyPath: UnitsSize
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 43472913410815303, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 7509974932778339729}
+    - target: {fileID: 679164970100290776, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 7015399457706511082}
+    - target: {fileID: 679164970100290776, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
+      propertyPath: defaultSize
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8124711292481914823, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
       propertyPath: m_Name
       value: Virtual Camera
@@ -20338,7 +20391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8904392749242892114, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 8904392749242892114, guid: f74d8a020022f53238793a8d41ef2e86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20619,18 +20672,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 999631852}
     m_Modifications:
+    - target: {fileID: 722474801415241601, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
+      propertyPath: orthographic size
+      value: 16.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6861033821707030866, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 7570957213982690409, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 7015399457706511082}
-    - target: {fileID: 7570957213982690409, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
-      propertyPath: virtualCamera
-      value: 
-      objectReference: {fileID: 212125337}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -20641,7 +20690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.z
