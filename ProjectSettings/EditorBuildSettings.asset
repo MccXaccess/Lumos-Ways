@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/C-Game/x04-Scenes/Phases/Phase 4 - Rejection.unity
     guid: 55faec9a327b2a035b0dc838e4916a85
+  - enabled: 1
+    path: Assets/C-Game/x04-Scenes/Phases/Phase 5 - Intrusive Thoughts.unity
+    guid: bb09a81b20d1660628f765a038ffe359
   m_configObjects: {}
