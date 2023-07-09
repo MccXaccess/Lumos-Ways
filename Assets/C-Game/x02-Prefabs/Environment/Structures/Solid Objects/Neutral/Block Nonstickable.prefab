@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2713116804346206534}
   - component: {fileID: 3249597800979929620}
   m_Layer: 9
-  m_Name: Block Unstickable
+  m_Name: Block Nonstickable
   m_TagString: Ignore Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
