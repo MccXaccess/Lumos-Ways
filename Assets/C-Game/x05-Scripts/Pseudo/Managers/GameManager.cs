@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     public string m_StageName;
 
+    private bool m_WinInitiated;
+
     public enum PlayerState
     {
         DEAD,
@@ -112,10 +114,12 @@ public class GameManager : MonoBehaviour
 
     private void NextStage()
     {
-        if (GameSceneManager.Instance != null)
-        {
-            demoLoadScene?.LoadScene(GameSceneManager.Instance.GetRelativeSceneIndex());
-        }
+        // if (!m_WinInitiated)
+        // {
+        //     demoLoadScene?.LoadScene(GameSceneManager.Instance.GetRelativeSceneIndex());
+        //     m_WinInitiated = true;
+        // }
+        demoLoadScene?.LoadScene(GameSceneManager.Instance.GetRelativeSceneIndex());
     }
 
     public void ReloadGame()

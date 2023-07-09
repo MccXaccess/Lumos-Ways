@@ -75,21 +75,19 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
 
         if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_NextStageTag))
         {
+            colliders[0].gameObject.SetActive(false);
             GameManager.Instance.InitWin();
-            m_CollisionObject = null;
             return;
         }
 
         if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_DoNotParentTag))
         {
             FreezePlayer(true);
-            m_CollisionObject = null;
             return;
         }
 
         if (m_CollisionDetected && colliders[0].gameObject.CompareTag(m_IgnoreCollisionTag))
         {
-            m_CollisionObject = null;
             return;
         }
 
@@ -107,7 +105,7 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
 
     public void Unparent()
     {
-        m_CollisionObject = null;
+        ParentPlayer(null);
     }
 
     private void OnJumpHandler()

@@ -576,7 +576,7 @@ Transform:
   - {fileID: 6037577484384625732}
   - {fileID: 8024568260063584173}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &8667745324071618201
 CircleCollider2D:
@@ -586,7 +586,7 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5065095225570778882}
   m_Enabled: 1
-  m_Density: 1
+  m_Density: 1.25
   m_Material: {fileID: 6200000, guid: 126b246ca3be7a84e8c62298eb8c5432, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -625,7 +625,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.6361725
+  m_Mass: 0.7952156
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 2
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_ExplosionParticle: {fileID: 7444818629803729635, guid: 74d1cde58f9d854aeb16b1b9bf9f68b1, type: 3}
   m_CooldownPassed: 1
   m_CollisionDetected: 0
-  m_CooldownDuration: 0.2
+  m_CooldownDuration: 0.1
   m_AudioSourceBase: {fileID: 11400000, guid: 94773369767b0024dbd3bef24a9bfe2c, type: 2}
   m_AudioSource: {fileID: 2310464384957955978}
 --- !u!114 &2407413817688939003
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaximumShootPower: 20
-  m_GravityModifier: 2
+  m_GravityModifier: 2.25
   m_ForwardDragging: 0
   m_ShowLineOnScreen: 1
   m_DragPlayerLine: {fileID: 6673220462794194156}
