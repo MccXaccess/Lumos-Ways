@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4298158921616989633}
   m_Layer: 9
   m_Name: Trampoline Powerful
-  m_TagString: Ignore But Cannot Shoot
+  m_TagString: Ignore Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

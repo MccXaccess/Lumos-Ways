@@ -10550,7 +10550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2936298976584330607, guid: bac3386f7dc14d7fbb03d0bcf551700b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2936298976584330607, guid: bac3386f7dc14d7fbb03d0bcf551700b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20640,6 +20640,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1577071900}
     - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
+      propertyPath: m_CanPause
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
       propertyPath: m_StageName
       value: Phase 4 - Rejection
       objectReference: {fileID: 0}
@@ -20900,6 +20904,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2407413817688939003, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
+      propertyPath: m_ForwardDragging
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407413817688939003, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_GravityModifier
       value: 2.5
       objectReference: {fileID: 0}
@@ -20913,7 +20921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7017626648100505514, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7017626648100505514, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_LocalPosition.x

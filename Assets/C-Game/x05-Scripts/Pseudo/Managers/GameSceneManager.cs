@@ -37,6 +37,11 @@ public class GameSceneManager : MonoBehaviour
         SceneManager.LoadScene(value);
     }
 
+    public void ChangeSceneTo(int value)
+    {
+        SceneManager.LoadScene(value);
+    }
+
     public void NextSceneFixed()
     {
         sceneIndex++;

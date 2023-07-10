@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     private bool m_WinInitiated;
 
+    public bool m_CanPause = true;
+
     public enum PlayerState
     {
         DEAD,
@@ -119,6 +121,7 @@ public class GameManager : MonoBehaviour
         //     demoLoadScene?.LoadScene(GameSceneManager.Instance.GetRelativeSceneIndex());
         //     m_WinInitiated = true;
         // }
+        m_CanPause = false;
         demoLoadScene?.LoadScene(GameSceneManager.Instance.GetRelativeSceneIndex());
     }
 

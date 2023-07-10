@@ -24273,6 +24273,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1577071900}
     - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
+      propertyPath: m_CanPause
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
       propertyPath: m_StageName
       value: Phase 2 - Mixed Feelings
       objectReference: {fileID: 0}

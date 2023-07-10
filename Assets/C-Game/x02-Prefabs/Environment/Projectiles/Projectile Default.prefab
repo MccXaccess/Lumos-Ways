@@ -119,7 +119,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.7, y: 0}
+    - - {x: 0.5924327, y: 0.0034536794}
       - {x: -0.3, y: 0.5}
       - {x: -0.3, y: -0.5}
   m_UseDelaunayMesh: 0

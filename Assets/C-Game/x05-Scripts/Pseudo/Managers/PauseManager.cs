@@ -40,7 +40,7 @@ public class PauseManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && GameManager.Instance.m_CanPause)
         {
             PauseToggle();
         }
