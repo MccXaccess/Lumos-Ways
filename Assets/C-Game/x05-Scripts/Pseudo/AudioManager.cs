@@ -20,7 +20,6 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-
             DontDestroyOnLoad(gameObject);
         }
 
@@ -28,8 +27,11 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
-        LoadVolume();
+    private void Start() 
+    {
+        LoadVolume();    
     }
 
     public void DeathSFX()
@@ -41,10 +43,12 @@ public class AudioManager : MonoBehaviour
 
     void LoadVolume()
     {
-        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
-        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY, 1f);
+        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY);
+        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY);
 
-        mixer.SetFloat(VoumeSettings.MIXER_MUSIC, Mathf.Log10(musicVolume) * 20);
-        mixer.SetFloat(VoumeSettings.MIXER_SFX, Mathf.Log10(sfxVolume) * 20);
+        //Debug.Log(musicVolume);
+
+        mixer.SetFloat("MusicVolumeParam"/*VoumeSettings.MIXER_MUSIC*/, Mathf.Log10(musicVolume) * 20);
+        mixer.SetFloat("SFXVolumeParam"/*VoumeSettings.MIXER_SFX*/, Mathf.Log10(sfxVolume) * 20);
     }
 }

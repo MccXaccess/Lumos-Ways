@@ -122,6 +122,12 @@ public class GameManager : MonoBehaviour
         //     m_WinInitiated = true;
         // }
         m_CanPause = false;
+        
+        if (SaveChapters.Instance.GetUnlockedLevelsValue() < GameSceneManager.Instance.GetCurrentSceneIndex())
+        {
+            SaveChapters.Instance.IncrementValue();
+        }
+
         demoLoadScene?.LoadScene(GameSceneManager.Instance.GetRelativeSceneIndex());
     }
 

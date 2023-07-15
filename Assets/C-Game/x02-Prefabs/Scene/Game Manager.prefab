@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3378643588538486086}
   - component: {fileID: 1280386638043488241}
+  - component: {fileID: 1685363397651366115}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1280386638043488241
 MonoBehaviour:
@@ -52,3 +53,18 @@ MonoBehaviour:
   demoLoadScene: {fileID: 0}
   m_Interactable: 1
   m_StageName: Stage Template
+  m_CanPause: 1
+  m_SaveChapters: {fileID: 1685363397651366115}
+--- !u!114 &1685363397651366115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162005031268519436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b0119a367bcc41f928707404a33d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UnlockedLevels: 0

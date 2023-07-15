@@ -104,10 +104,9 @@ namespace EasyTransition
             //Checking if this transition instance has allready played
             if (hasTransitionTriggeredOnce) return;
 
+            if (transitionPanelIN != null) transitionPanelIN.gameObject.SetActive(false);
 
-            transitionPanelIN.gameObject.SetActive(false);
-
-        //Setting up the transition
+            //Setting up the transition
             transitionPanelOUT.gameObject.SetActive(true);
                 
             GameObject transitionOut = Instantiate(transitionSettings.transitionOut, transitionPanelOUT);

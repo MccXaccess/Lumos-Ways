@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using EasyTransition;
 
 public class GameSceneManager : MonoBehaviour
 {
@@ -62,5 +63,15 @@ public class GameSceneManager : MonoBehaviour
     public int GetRelativeSceneIndex()
     {
         return SceneManager.GetActiveScene().buildIndex + 1;
+    }
+
+    public int GetCurrentSceneIndex()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void LoadLastProgress(DemoLoadScene a_DemoLoadScene)
+    {
+        a_DemoLoadScene.LoadScene(SaveChapters.Instance.m_UnlockedLevels);
     }
 }

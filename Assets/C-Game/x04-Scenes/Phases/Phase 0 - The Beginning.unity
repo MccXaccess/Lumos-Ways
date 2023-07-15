@@ -26865,6 +26865,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1301094353}
     - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
+      propertyPath: m_SaveChapters
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280386638043488241, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
       propertyPath: m_TMProCurrentStageTitle
       value: 
       objectReference: {fileID: 1056199011}
@@ -26912,7 +26916,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1685363397651366115, guid: 6783b8fafd0343aaaa6b00fca031ca45, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27053,11 +27058,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1124142063274645440, guid: bac3386f7dc14d7fbb03d0bcf551700b, type: 3}
       propertyPath: m_Name
-      value: AudioManager
+      value: Audio Manager
       objectReference: {fileID: 0}
     - target: {fileID: 2936298976584330607, guid: bac3386f7dc14d7fbb03d0bcf551700b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2936298976584330607, guid: bac3386f7dc14d7fbb03d0bcf551700b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27636,7 +27641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7017626648100505514, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7017626648100505514, guid: 4fe8f3360b789d79994634363f3a730a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28372,9 +28377,25 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4495394284421469120, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 54.685684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495394284421469120, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 31.878244
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495394284421469120, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 71.78411
+      objectReference: {fileID: 0}
     - target: {fileID: 6861033821707030866, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861033821707030866, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_RootOrder
