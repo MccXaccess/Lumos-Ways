@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     private bool m_WinInitiated;
 
-    public bool m_CanPause = true;
+    public bool m_CanPause = false;
 
     public enum PlayerState
     {
@@ -172,5 +172,7 @@ public class GameManager : MonoBehaviour
                 m_IsAlive = false;
                 break;
         }
+
+        //m_CanPause = TransitionManager.Instance().IsRunningTransition();
     }
 }

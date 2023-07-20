@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EasyTransition;
 
 public class PauseManager : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class PauseManager : MonoBehaviour
 
     public void PauseToggle()
     {
+        if (TransitionManager.Instance().runningTransition)
+        {
+            // Don't pause or resume the game if a transition is running
+            return;
+        }
+
         m_CurrentState = !m_CurrentState;
 
         if (m_CurrentState)
@@ -36,7 +43,6 @@ public class PauseManager : MonoBehaviour
 
         Time.timeScale = m_CurrentState ? 0 : 1;
     }
-
 
     private void Update()
     {

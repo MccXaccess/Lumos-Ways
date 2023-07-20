@@ -32,11 +32,11 @@ public class LastCutscene : MonoBehaviour
 
     IEnumerator Timer()
     {
-        yield return new WaitForSeconds(40);
+        yield return new WaitForSeconds(45);
         m_FadeOutTransition?.LoadScene(0);
         yield return new WaitForSeconds(7.5f);
         m_TitlesScreen.SetActive(true);
-        yield return new WaitForSeconds(21.5f);
+        yield return new WaitForSeconds(25.5f);
 
         while (m_AudioSource.volume > 0.1f)
         {

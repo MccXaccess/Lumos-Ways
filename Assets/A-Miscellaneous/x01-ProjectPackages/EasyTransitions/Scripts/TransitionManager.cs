@@ -11,7 +11,7 @@ namespace EasyTransition
     {        
         [SerializeField] private GameObject transitionTemplate;
 
-        private bool runningTransition;
+        public bool runningTransition;
 
         public UnityAction onTransitionBegin;
         public UnityAction onTransitionCutPointReached;
@@ -44,7 +44,6 @@ namespace EasyTransition
                 Debug.LogError("You have to assing a transition.");
                 return;
             }
-
             runningTransition = true;
             StartCoroutine(Timer(startDelay, transition));
         }
