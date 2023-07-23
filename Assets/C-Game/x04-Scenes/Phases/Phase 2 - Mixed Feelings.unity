@@ -5177,7 +5177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: I hope I'm making the right decision...*
+      value: I was like stone*, stupid stone.
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -5193,11 +5193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalScale.x
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6654,7 +6654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: I* hope...
+      value: maybe...*
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -7583,15 +7583,15 @@ PrefabInstance:
       objectReference: {fileID: 1645463923}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: Perhaps*, it's time to confess?
+      value: I didn't know how to act on my emotions*
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
-      value: despite the feelings, in my heart?
+      value: maybe i wasn't good enough?**
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[2]
@@ -7607,7 +7607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17034,7 +17034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: Ashley**, Ashley**, ashley!!**
+      value: A*shley...*
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -17516,11 +17516,11 @@ PrefabInstance:
       objectReference: {fileID: 1645463923}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: '*My Heart started raising everytime she was nearby**'
+      value: i wasn't lucky* to feel anyone's love*
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -24185,6 +24185,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 861835589}
+    - target: {fileID: 3313336634929857743, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4901929650050722622, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -25230,8 +25234,8 @@ Transform:
   - {fileID: 64214622}
   - {fileID: 1593276938}
   - {fileID: 1723117542}
-  - {fileID: 725242990}
   - {fileID: 1906788648}
+  - {fileID: 725242990}
   m_Father: {fileID: 2691106717212739600}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

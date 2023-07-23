@@ -7474,7 +7474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: or...* were they?
+      value: i just was alone* and wanted some attention...
+      objectReference: {fileID: 0}
+    - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
+      propertyPath: dialogueSentences.Array.data[1]
+      value: i was too excited* i was alone...
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_RootOrder
@@ -21001,7 +21005,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: Those were the best moments of my life
+      value: Those were the best moments in my life,* ha-ha
+      objectReference: {fileID: 0}
+    - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
+      propertyPath: dialogueSentences.Array.data[1]
+      value: because i was alone
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_RootOrder
@@ -23006,6 +23014,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 861835589}
+    - target: {fileID: 3313336634929857743, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3916701256986315328, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

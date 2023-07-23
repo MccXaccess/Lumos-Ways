@@ -2953,7 +2953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: i know, everything is gonna be different now.
+      value: Unknown fear slowly taking over my mind**
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_RootOrder
@@ -2961,7 +2961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.9
+      value: 49.8
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3031,7 +3031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: but my hands are...* shaking...
+      value: Ashley!
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -3043,7 +3043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 79
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7261,7 +7261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: I hope all the pain*, suffer* was not in vain...
+      value: ' But deep inside,** I felt something was wrong...***'
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_RootOrder
@@ -7269,7 +7269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.3
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20551,7 +20551,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Game Design by \nmccxaccess\n\nlevel design by\nmccxaccess\n\nvisual effects
     by\nmccxaccess\n\nstory by\nmccxaccess\n\ncode by\nmccxaccess\n\nsoundtracks
-    by\nAngelo"
+    by\nSOUL\n\n\nThanks for support To:\nSOUL\nChimpchi\nalastorscp\nkazafu_12\ndenny\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
   m_sharedMaterial: {fileID: -920250884809401140, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
@@ -20996,7 +20996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: '***you made all of this way trough* just for what?**'
+      value: '***Huh? you made all of this way trough* just for what?**'
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -21036,7 +21036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalScale.x
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalScale.y
@@ -21044,7 +21044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 140
+      value: 147.2
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35360,6 +35360,7 @@ MonoBehaviour:
   m_TitlesScreen: {fileID: 930381176}
   m_AudioSource: {fileID: 78558687}
   m_IgnoreTime: 0
+  m_TextScrollSpeed: 50
 --- !u!1 &1922843395
 GameObject:
   m_ObjectHideFlags: 0
@@ -39365,6 +39366,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 861835589}
+    - target: {fileID: 3313336634929857743, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4901929650050722622, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -40322,7 +40327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: Time has come* To truly Confess...**
+      value: I acknowledged all of my past attempts**
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_RootOrder
@@ -40770,7 +40775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4712293061432753525, guid: fa099c1438dac325b8b56c86fdc76f22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.79953
+      value: 16.87459
       objectReference: {fileID: 0}
     - target: {fileID: 4712293061432753525, guid: fa099c1438dac325b8b56c86fdc76f22, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41054,7 +41059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090993066193729612, guid: 4a4295b39875c6856a926fc1d6472320, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.79953
+      value: -16.87459
       objectReference: {fileID: 0}
     - target: {fileID: 9090993066193729612, guid: 4a4295b39875c6856a926fc1d6472320, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41228,7 +41233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 856426972787002907, guid: 7103720a98b07ab52b7e0af161683e1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.399765
+      value: -8.437295
       objectReference: {fileID: 0}
     - target: {fileID: 856426972787002907, guid: 7103720a98b07ab52b7e0af161683e1b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41297,7 +41302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422430476290928654, guid: 1757886e72a5a4a9f80a95ef57313df0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.59964
+      value: -12.655936
       objectReference: {fileID: 0}
     - target: {fileID: 4422430476290928654, guid: 1757886e72a5a4a9f80a95ef57313df0, type: 3}
       propertyPath: m_LocalPosition.y

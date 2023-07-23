@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/C-Game/x04-Scenes/Phases/Phase 7 - Past Memories.unity
     guid: 73878ac140a6fcf3ca29786d2c80c247
   - enabled: 1
-    path: Assets/C-Game/x04-Scenes/Phases/Phase 8 - Questions.unity
+    path: Assets/C-Game/x04-Scenes/Phases/Phase 8 - Last Attempt.unity
     guid: 8ca8c3cd0cf423bfdaad9718a4c3a1f4
   - enabled: 1
     path: Assets/C-Game/x04-Scenes/Phases/Phase 9 - Answers.unity

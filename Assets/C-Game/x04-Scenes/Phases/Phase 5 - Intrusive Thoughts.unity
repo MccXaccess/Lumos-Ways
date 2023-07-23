@@ -1658,7 +1658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: I need to step back* and rethink before making decisions...
+      value: You are wrong!!!*** Suddenly,* I heard her voice in the empty room
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -1678,11 +1678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 134.7
+      value: 124.9
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 73.5
+      value: 70.7
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2081,11 +2081,11 @@ PrefabInstance:
       objectReference: {fileID: 1685926961}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: Depression Slowly Started Taking  over my Mind...**
+      value: My mind started drifting away** from reality...
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -3965,11 +3965,11 @@ PrefabInstance:
       objectReference: {fileID: 1685926961}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: Sometimes* Chaos Takes over Rational Thinking
+      value: I had drifted too far away from reality...**
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -3985,7 +3985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.1
+      value: -19.3
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25681,11 +25681,12 @@ PrefabInstance:
       objectReference: {fileID: 1685926961}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: My thoughts were always in motion...*
+      value: Sometimes**, I couldn't sleep because of the overwhelming thoughts in
+        my mind
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -25705,11 +25706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 118.3
+      value: 118.1
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.3
+      value: 31.6
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28610,96 +28611,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6999419555789204926, guid: 0711914839fd954de8fe1afbbb6bb395, type: 3}
   m_PrefabInstance: {fileID: 1602992801}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1962430631
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5206131686660476487}
-    m_Modifications:
-    - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: dialogueManager
-      value: 
-      objectReference: {fileID: 1685926961}
-    - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: dialogueSentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: dialogueSentences.Array.data[0]
-      value: Hallucinations...* I Heard Voices...*
-      objectReference: {fileID: 0}
-    - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: dialogueSentences.Array.data[1]
-      value: Stuck in Paradox of reality
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 123.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 53.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69268066
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7212445
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -92.315
-      objectReference: {fileID: 0}
-    - target: {fileID: 4113776519663307929, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-      propertyPath: m_Name
-      value: Trigger Dialogue (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
---- !u!4 &1962430632 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
-  m_PrefabInstance: {fileID: 1962430631}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1963112768
 PrefabInstance:
@@ -32435,6 +32346,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 861835589}
+    - target: {fileID: 3313336634929857743, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4901929650050722622, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -33386,11 +33301,11 @@ PrefabInstance:
       objectReference: {fileID: 1685926961}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: I thought of many different ways...*
+      value: I started viewing this world from** a different perspective
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -33599,9 +33514,8 @@ Transform:
   - {fileID: 1315363691}
   - {fileID: 977977109}
   - {fileID: 1794629086}
-  - {fileID: 1962430632}
-  - {fileID: 1703061295}
   - {fileID: 161003455}
+  - {fileID: 1703061295}
   m_Father: {fileID: 2691106717212739600}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34245,7 +34159,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 722474801415241601, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: orthographic size
-      value: 15
+      value: 14.932611
       objectReference: {fileID: 0}
     - target: {fileID: 6861033821707030866, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_Name
@@ -34265,11 +34179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.11792991
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.16476691
       objectReference: {fileID: 0}
     - target: {fileID: 8311287582651813721, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: m_LocalPosition.z

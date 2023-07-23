@@ -28,7 +28,6 @@ public class ChapterButtonController : MonoBehaviour
 
     private void CheckAcessibility()
     {
-        Debug.Log("asdf");
         if (SaveChapters.Instance.CheckLockedStatus(m_ChapterIndex))
         {
             button.interactable = true;
