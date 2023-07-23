@@ -36,7 +36,7 @@ public class LastCutscene : MonoBehaviour
         m_FadeOutTransition?.LoadScene(0);
         yield return new WaitForSeconds(7.5f);
         m_TitlesScreen.SetActive(true);
-        yield return new WaitForSeconds(25.5f);
+        yield return new WaitForSeconds(22.5f);
 
         while (m_AudioSource.volume > 0.1f)
         {

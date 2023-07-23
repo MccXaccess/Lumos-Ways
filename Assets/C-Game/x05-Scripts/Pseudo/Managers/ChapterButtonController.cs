@@ -10,11 +10,25 @@ public class ChapterButtonController : MonoBehaviour
     public DemoLoadScene m_LoadTransitionScene;
     public GameObject m_LockedLevelObject;
 
+    private Button button;
+    private Image image;
+
     private void Start()
     {
-        Button button = GetComponent<Button>();
-        Image image = GetComponent<Image>();
+        button = GetComponent<Button>();
+        image = GetComponent<Image>();
 
+        CheckAcessibility();
+    }
+
+    public void ButtonLoadScene()
+    {
+        m_LoadTransitionScene.LoadScene(m_ChapterIndex);
+    }
+
+    private void CheckAcessibility()
+    {
+        Debug.Log("asdf");
         if (SaveChapters.Instance.CheckLockedStatus(m_ChapterIndex))
         {
             button.interactable = true;
@@ -28,8 +42,15 @@ public class ChapterButtonController : MonoBehaviour
         button.interactable = false;
     }
 
-    public void ButtonLoadScene()
+    private void OnEnable()
     {
-        m_LoadTransitionScene.LoadScene(m_ChapterIndex);
+        // Subscribe to the event when the object is enabled
+        SaveChapters.Instance.onLevelModify += CheckAcessibility;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe from the event when the object is disabled
+        SaveChapters.Instance.onLevelModify -= CheckAcessibility;
     }
 }

@@ -107,7 +107,7 @@ namespace EasyTransition
             if (transitionPanelIN != null) transitionPanelIN.gameObject.SetActive(false);
 
             //Setting up the transition
-            transitionPanelOUT.gameObject.SetActive(true);
+            if (transitionPanelOUT != null) transitionPanelOUT.gameObject.SetActive(true);
                 
             GameObject transitionOut = Instantiate(transitionSettings.transitionOut, transitionPanelOUT);
             transitionOut.AddComponent<CanvasGroup>().blocksRaycasts = transitionSettings.blockRaycasts;

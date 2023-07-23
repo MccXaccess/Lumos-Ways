@@ -849,7 +849,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8485789613766947805, guid: 6b2fab8197ff88c77bcd3eae590fe6f5, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e18670850c410d4ee82bca21add9a389, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f286b2db0e9133ca28284d397a6839c5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -26675,10 +26675,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 861835589}
+    - target: {fileID: 896906500271818517, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757532782900515343, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2484831955892248734, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 861835589}
+    - target: {fileID: 2666637583519793600, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313336634929857743, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590507232434316324, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4901929650050722622, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -26763,6 +26783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4984384631060368359, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6194347738493455089, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -26774,6 +26798,10 @@ PrefabInstance:
     - target: {fileID: 6912172506921822930, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_Name
       value: Main Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537428708951649590, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

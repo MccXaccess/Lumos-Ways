@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d850a73cc7aea64408f7f45d71cee2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogueManager: {fileID: 0}
+  dialogueSentences: []
 --- !u!61 &3433465167171327052
 BoxCollider2D:
   m_ObjectHideFlags: 0

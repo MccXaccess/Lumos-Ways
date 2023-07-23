@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cyanilux.urp-blitrenderfeature": "https://github.com/Cyanilux/URP_BlitRenderFeature.git",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.feature.2d": "2.0.0",

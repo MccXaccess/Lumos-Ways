@@ -12,10 +12,17 @@ public class LevelButton : MonoBehaviour
     {
         button = GetComponent<Button>();
 
+        CheckAcessibility();
+    }
+
+    private void CheckAcessibility()
+    {
+        
+
         // Subscribe to the event
         //saveChapters.OnLevelUnlock.AddListener(OnLevelUnlocked);
 
-        if (saveChapters.CheckLockedStatus(levelIndex))
+        if (SaveChapters.Instance.CheckLockedStatus(levelIndex))
         {
             button.interactable = true; 
             return;
@@ -24,8 +31,15 @@ public class LevelButton : MonoBehaviour
         button.interactable = false;
     }
 
-    private void OnDisable() 
+    private void OnEnable()
     {
-        //saveChapters.OnLevelUnlock.RemoveListener(OnLevelUnlocked);    
+        // Subscribe to the event when the object is enabled
+        SaveChapters.Instance.onLevelModify += CheckAcessibility;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe from the event when the object is disabled
+        SaveChapters.Instance.onLevelModify -= CheckAcessibility;
     }
 }

@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
         // }
         m_CanPause = false;
         
-        if (SaveChapters.Instance.GetUnlockedLevelsValue() < GameSceneManager.Instance.GetCurrentSceneIndex())
+        if (SaveChapters.Instance.GetUnlockedLevelsValue() <= GameSceneManager.Instance.GetCurrentSceneIndex())
         {
             SaveChapters.Instance.IncrementValue();
         }

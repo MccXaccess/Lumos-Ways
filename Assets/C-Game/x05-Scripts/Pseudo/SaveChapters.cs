@@ -13,7 +13,8 @@ public class SaveChapters : MonoBehaviour
     // Event for level unlock
     // but in this sutuation i think it's appropriate to use
     // checklockedstatus
-    //public UnityEvent<int> OnLevelUnlock;
+    public delegate void OnLevelModify();
+    public event OnLevelModify onLevelModify;
 
     private void Awake()
     {
@@ -28,15 +29,15 @@ public class SaveChapters : MonoBehaviour
 
         m_UnlockedLevels = GetUnlockedLevelsValue();
 
-        if (m_UnlockedLevels > 9)
+        if (m_UnlockedLevels > 10)
         {
-            PlayerPrefs.SetInt(UNLOCKED_LEVELS_KEY, 9); 
+            PlayerPrefs.SetInt(UNLOCKED_LEVELS_KEY, 10); 
         }
     }
 
     public void ResetProgress()
     {
-        PlayerPrefs.SetInt(UNLOCKED_LEVELS_KEY, 1);
+        ResetValue();
     }
 
     public void IncrementValue()
@@ -48,17 +49,24 @@ public class SaveChapters : MonoBehaviour
 
     public int GetUnlockedLevelsValue()
     {
-        return PlayerPrefs.GetInt(UNLOCKED_LEVELS_KEY, 1);
+        return PlayerPrefs.GetInt(UNLOCKED_LEVELS_KEY, 0);
+    }
+
+    private void UpdateUnlockedLevelsValue()
+    {
+        m_UnlockedLevels = GetUnlockedLevelsValue();
     }
 
     public void ResetValue()
     {
-        PlayerPrefs.DeleteKey(UNLOCKED_LEVELS_KEY);
+        onLevelModify?.Invoke();
+        PlayerPrefs.SetInt(UNLOCKED_LEVELS_KEY, 0);
+        UpdateUnlockedLevelsValue();
     }
 
     public bool CheckLockedStatus(int a_levelIndex)
     {
-        if (a_levelIndex <= m_UnlockedLevels + 1) { return true; }
+        if (a_levelIndex <= m_UnlockedLevels) { return true; }
         else { return false; }
     }
 }

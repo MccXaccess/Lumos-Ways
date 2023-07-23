@@ -1102,7 +1102,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8485789613766947805, guid: 6b2fab8197ff88c77bcd3eae590fe6f5, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0c0dea630ed7986cdb92bb3ee5da961c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c259c0cb0a1b74fb280672dbbcbbe7ad, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -21001,7 +21001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: those were best moments in my life
+      value: Those were the best moments of my life
       objectReference: {fileID: 0}
     - target: {fileID: 2294837080031456313, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: m_RootOrder

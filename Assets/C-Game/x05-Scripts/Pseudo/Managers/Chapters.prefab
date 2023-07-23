@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 9
+  m_ChapterIndex: 8
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 4602946925021865103}
 --- !u!114 &6819487379432899718
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 4
+  m_ChapterIndex: 3
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 2917557098600389094}
 --- !u!114 &3657813676035336062
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 6
+  m_ChapterIndex: 5
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 1028055825360199077}
 --- !u!114 &658638284483684678
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 1
+  m_ChapterIndex: 0
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 4634870277269540695}
 --- !u!114 &7355400241824305842
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 5
+  m_ChapterIndex: 4
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 1989939505448290288}
 --- !u!114 &8368270969592093240
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 10
+  m_ChapterIndex: 9
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 4956316961117265812}
 --- !u!114 &2117254902460653013
@@ -4409,7 +4409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 3
+  m_ChapterIndex: 2
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 4942453658659263140}
 --- !u!114 &7900823919126657075
@@ -5194,7 +5194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 2
+  m_ChapterIndex: 1
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 4615115753692511059}
 --- !u!114 &9019267200493313124
@@ -6023,7 +6023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 7
+  m_ChapterIndex: 6
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 7361301142780063267}
 --- !u!114 &728101230349857732
@@ -7191,7 +7191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be414bc879277f805b8d0f3fa5df902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChapterIndex: 8
+  m_ChapterIndex: 7
   m_LoadTransitionScene: {fileID: 2844134925111619755}
   m_LockedLevelObject: {fileID: 379657496000743338}
 --- !u!114 &2824679548720561444
