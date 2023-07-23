@@ -15,6 +15,8 @@ public class ChapterButtonController : MonoBehaviour
 
     private void Start()
     {
+        SaveChapters.Instance.onLevelModify += CheckAcessibility;
+
         button = GetComponent<Button>();
         image = GetComponent<Image>();
 

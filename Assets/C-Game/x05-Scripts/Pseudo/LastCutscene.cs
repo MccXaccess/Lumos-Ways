@@ -36,7 +36,7 @@ public class LastCutscene : MonoBehaviour
         yield return new WaitForSeconds(45f);
 
         // Fade out the scene transition
-        m_FadeOutTransition?.LoadScene(0);
+        m_FadeOutTransition?.LoadScene("Main Menu");
 
         // Wait for 7.5 seconds after the scene fades out
         yield return new WaitForSeconds(7.5f);
@@ -61,12 +61,12 @@ public class LastCutscene : MonoBehaviour
         }
 
         // Wait for 22.5 seconds after the text scrolls off the screen
-        yield return new WaitForSeconds(11.5f);
+        yield return new WaitForSeconds(10);
 
         // Fade out the audio
         while (m_AudioSource.volume > 0.05f)
         {
-            m_AudioSource.volume -= Time.deltaTime * 0.1f;
+            m_AudioSource.volume -= Time.deltaTime * 0.2f;
             yield return new WaitForSeconds(0.2f);
         }
     }

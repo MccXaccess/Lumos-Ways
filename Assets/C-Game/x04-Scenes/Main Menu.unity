@@ -2496,6 +2496,7 @@ MonoBehaviour:
   m_PrefabsForPool:
   - {fileID: 8313136196195821689, guid: bd468c29d47961965a38ce1ba955e3b6, type: 3}
   - {fileID: 6080758706677184725, guid: d864c92b2283bdcfb99cdedaa26af189, type: 3}
+  - {fileID: 7556781607918488727, guid: 2f634a3e6e64a744db56c80f7e8a6534, type: 3}
 --- !u!1 &1068999835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,7 +2555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ABOUT DEVELOPMENT
+  m_text: ABOUT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
   m_sharedMaterial: {fileID: -920250884809401140, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
@@ -2581,8 +2582,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2788,7 +2789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b0119a367bcc41f928707404a33d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UnlockedLevels: 0
+  m_UnlockedLevels: 1
 --- !u!4 &1256308820
 Transform:
   m_ObjectHideFlags: 0
@@ -2918,7 +2919,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ABOUT DEVELOPMENT
+  m_text: ABOUT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
   m_sharedMaterial: {fileID: -920250884809401140, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
@@ -2927,8 +2928,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 855638015
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.19607843}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2945,8 +2946,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4094,6 +4095,7 @@ GameObject:
   - component: {fileID: 2131292800}
   - component: {fileID: 2131292799}
   - component: {fileID: 2131292798}
+  - component: {fileID: 2131292803}
   m_Layer: 5
   m_Name: about
   m_TagString: Untagged
@@ -4201,7 +4203,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2131292801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2131292803}
+        m_TargetAssemblyTypeName: ShowPanelButton, Assembly-CSharp
+        m_MethodName: DoShowPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2131292801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4240,6 +4254,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131292796}
   m_CullTransparentMesh: 1
+--- !u!114 &2131292803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131292796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a458bae60878e05ee90dda9529b31c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelID: About Developer
+  m_Behaviour: 1
 --- !u!1 &2134844419
 GameObject:
   m_ObjectHideFlags: 0

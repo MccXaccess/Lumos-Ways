@@ -37,7 +37,8 @@ public class SaveChapters : MonoBehaviour
 
     public void ResetProgress()
     {
-        ResetValue();
+        PlayerPrefs.SetInt(UNLOCKED_LEVELS_KEY, 0);
+        UpdateUnlockedLevelsValue();
     }
 
     public void IncrementValue()
@@ -55,13 +56,8 @@ public class SaveChapters : MonoBehaviour
     private void UpdateUnlockedLevelsValue()
     {
         m_UnlockedLevels = GetUnlockedLevelsValue();
-    }
-
-    public void ResetValue()
-    {
+        PlayerPrefs.SetInt(UNLOCKED_LEVELS_KEY, m_UnlockedLevels);
         onLevelModify?.Invoke();
-        PlayerPrefs.SetInt(UNLOCKED_LEVELS_KEY, 0);
-        UpdateUnlockedLevelsValue();
     }
 
     public bool CheckLockedStatus(int a_levelIndex)

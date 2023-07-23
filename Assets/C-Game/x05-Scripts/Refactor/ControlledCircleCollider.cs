@@ -103,6 +103,14 @@ public class ControlledCircleCollider : MonoBehaviour, IUnparent
         ParentPlayer(null);
     }
 
+    // private void OnCollisionEnter2D(Collision2D other) 
+    // {
+    //     if (other.gameObject.CompareTag("Death"))
+    //     {
+    //         WhenDead();
+    //     }
+    // }
+
     public void Unparent()
     {
         ParentPlayer(null);
