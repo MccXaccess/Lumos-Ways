@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/C-Game/x04-Scenes/Main Menu.unity
+    guid: c77f297b0bfebd5638ebbeecc5a2246b
+  - enabled: 1
     path: Assets/C-Game/x04-Scenes/Phases/Phase 0 - The Beginning.unity
     guid: 0abb944238ad0e3cd8428baf8b5a1156
   - enabled: 1
@@ -35,7 +38,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/C-Game/x04-Scenes/Phases/Phase 9 - Answers.unity
     guid: c7f60aa36c30a693eb8fccb4d3bdae3f
-  - enabled: 1
-    path: Assets/C-Game/x04-Scenes/Main Menu.unity
-    guid: c77f297b0bfebd5638ebbeecc5a2246b
   m_configObjects: {}

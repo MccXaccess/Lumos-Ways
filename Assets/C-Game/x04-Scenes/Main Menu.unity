@@ -2494,9 +2494,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PrefabsForPool:
-  - {fileID: 8313136196195821689, guid: bd468c29d47961965a38ce1ba955e3b6, type: 3}
+  - {fileID: 2527345740840922132, guid: bd468c29d47961965a38ce1ba955e3b6, type: 3}
   - {fileID: 6080758706677184725, guid: d864c92b2283bdcfb99cdedaa26af189, type: 3}
-  - {fileID: 7556781607918488727, guid: 2f634a3e6e64a744db56c80f7e8a6534, type: 3}
+  - {fileID: 4162997456372523802, guid: 2f634a3e6e64a744db56c80f7e8a6534, type: 3}
 --- !u!1 &1068999835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,7 +3869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: beta 0.1.2
+  m_text: demo 0.2.2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
   m_sharedMaterial: {fileID: -920250884809401140, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
@@ -4004,7 +4004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: beta 0.1.2
+  m_text: demo 0.2.2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}
   m_sharedMaterial: {fileID: -920250884809401140, guid: a77f9e1c12fb7d573ad8a14491daca9f, type: 2}

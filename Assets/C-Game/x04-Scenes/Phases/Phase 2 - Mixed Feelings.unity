@@ -1063,7 +1063,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8485789613766947805, guid: 6b2fab8197ff88c77bcd3eae590fe6f5, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 7e7e47375d5da817683831545c3cd5b4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6aca41af3d0786361b98e618cfae7637, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5177,7 +5177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: i need to be stronger*
+      value: i need to be stronger**
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -7587,7 +7587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: and didn't know how to act on my emotions*
+      value: and didn't know how to act on my emotions***
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -17520,7 +17520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[0]
-      value: i wasn't lucky* to feel anyone's love*
+      value: i wasn't lucky* to feel anyone's love**
       objectReference: {fileID: 0}
     - target: {fileID: 636279014051376955, guid: 0d6df9add45c841599f973d5e89cc243, type: 3}
       propertyPath: dialogueSentences.Array.data[1]
@@ -25845,6 +25845,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 999631852}
     m_Modifications:
+    - target: {fileID: 722474801415241601, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
+      propertyPath: near clip plane
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 722474801415241601, guid: d738a7a63e0823361b9e9669baaa90c0, type: 3}
       propertyPath: orthographic size
       value: 15

@@ -45,7 +45,7 @@ public class TNT : MonoBehaviour
         explosionParticle.Play();
         explosionSound.Play();
         // destroy the parent here
-        Destroy(transform.parent.gameObject, 1);
+        Destroy(transform.parent.gameObject, 0);
     }
 }
 
