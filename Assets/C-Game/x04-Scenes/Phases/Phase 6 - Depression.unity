@@ -824,7 +824,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8485789613766947805, guid: 6b2fab8197ff88c77bcd3eae590fe6f5, type: 2}
-  m_audioClip: {fileID: 8300000, guid: be8daff1f0e5e21b1a2d90bab1f4b8cb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b5ceaa511d65f1ce4a26e5c3ea1ce3ec, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -21911,22 +21911,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 84650634}
     m_Modifications:
-    - target: {fileID: 1732472890391725137, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2484831955892248734, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 861835589}
-    - target: {fileID: 3313336634929857743, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
-      propertyPath: m_VertexColorAlwaysGammaSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313336634929857743, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 4901929650050722622, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -22022,10 +22010,6 @@ PrefabInstance:
     - target: {fileID: 6912172506921822930, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
       propertyPath: m_Name
       value: Main Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6912172506921822930, guid: a08a637ae5b67a60eaa9c6ccefec3297, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
